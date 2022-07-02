@@ -1,0 +1,52 @@
+.bubble-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-btn {
+  /* background-image: url("."); */
+  width: 13vw;
+  height: 7vh;
+  background-size: 100% 100%;
+  transform: scaleX(-1);
+  position: relative;
+  right: 34vw;
+  top: 3vh;
+}
+
+.mission-title {
+  position: relative;
+  font-size: 8vw;
+  width: 97%;
+  top: -3vh;
+  margin-bottom: 5vh;
+  margin-top: 4vh;
+}
+
+.start-mission-btn {
+  margin: 0;
+  position: relative;
+  top: -5vh;
+  right: -16vw;
+  /* right: 30vw; */
+}
+
+.back-to-explenation-btn {
+  position: relative;
+  right: -16vw;
+  top: -3vh;
+}
+
+/*
+html {
+  line-height: 1.5;
+  font-weight: 300;
+  color: #192229;
+  background: linear-gradient(135deg, #f4f2f3, #bfc6d0);
+}
+
+body {
+  padding: 0 2rem;
+} */

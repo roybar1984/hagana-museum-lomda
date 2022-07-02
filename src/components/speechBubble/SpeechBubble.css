@@ -1,0 +1,151 @@
+/* .speech-bubble {
+  background: #a5eaf0b6;
+  border-radius: 5rem;
+  width: 40vw;
+  height: 30vh;
+  padding: 1.125em 1.5em;
+} */
+
+.speech-bubble {
+  position: relative;
+  background: #d3e6f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rem;
+  width: 50vw;
+  /* padding: 1.125em 1.5em; */
+  height: 30vh;
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  width: 0;
+  height: 8px;
+  border: 105px solid transparent;
+  border-top-color: #d3e6f7;
+  border-bottom: 0;
+  margin-left: -39px;
+  margin-bottom: -38px;
+}
+
+.top-speech-bubble:after {
+  content: "";
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  width: 0;
+  height: 8px;
+  border: 105px solid transparent;
+  border-top-color: #d3e6f7;
+  border-bottom: 0;
+  margin-left: -39px;
+  margin-bottom: -38px;
+  display: none;
+}
+
+.bubble-text {
+  font-family: normal-text;
+  font-weight: 300;
+  width: 80%;
+  margin: 0;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.bubble-title {
+  font-family: bold-text;
+  font-weight: 900;
+  font-size: 2.5vw;
+  color: rgb(133, 93, 5);
+  margin-top: -0.2vh;
+  width: 80%;
+}
+
+.pre-mission-bubbles {
+  height: 23vh;
+  margin-top: 0vh;
+}
+
+@media only screen and (max-width: 768px) {
+  /* .bubble-title {
+    font-weight: 900;
+    color: rgb(133, 93, 5);
+    margin-top: -0.2vh;
+    width: 80%;
+  } */
+
+  .bubble-title {
+    font-weight: 900;
+    font-size: 7vw;
+    color: rgb(133, 93, 5);
+    margin-top: 0.5vh;
+    width: 80%;
+    position: relative;
+    /* top: -2.5vh; */
+  }
+
+  .speech-bubble {
+    position: relative;
+
+    /* top: -8vh; */
+    /* background: #a5eaf0b6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* border-radius: 0.4em; */
+    border-radius: 5rem;
+    width: 66vw;
+    /* padding: 1.5em 1.5em; */
+    padding: 1.5em 1em;
+  }
+
+  .bubble-text {
+    width: 100%;
+    margin: 0;
+    margin-top: -1vh;
+    font-size: 5.5vw;
+    position: relative;
+    top: -2.3vh;
+    font-weight: 300;
+  }
+
+  .speech-bubble:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 39px solid transparent;
+    border-top-color: #d3e6f7;
+    border-bottom: 0;
+    margin-left: -39px;
+    margin-bottom: -39px;
+  }
+
+  .top-bubble {
+    top: -10vh;
+    margin-top: 5vh;
+  }
+
+  .bottom-bubble {
+    top: -15vh;
+    /* left: -6vw; */
+  }
+
+  .pre-mission-bubbles {
+    height: 23vh;
+    margin-top: 0vh;
+  }
+
+  .feel-ready-bubble {
+    width: 60vw;
+    height: 17vh;
+  }
+}

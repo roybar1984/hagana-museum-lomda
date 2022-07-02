@@ -1,0 +1,80 @@
+.titles-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -5vh;
+  height: 30vh;
+}
+
+.opening-titles {
+  /* font-family: title; */
+  color: #d3e6f7;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  /* border: solid #0695ed; */
+}
+
+.opening-title1 {
+  font-size: 11vw;
+}
+
+.opening-title2 {
+  font-size: 8vw;
+  margin-top: 0;
+}
+
+.btns {
+  width: 16vw;
+  height: 5vh;
+  border-radius: 3em;
+  font-size: 2.5vw;
+  cursor: pointer;
+  border: solid rgba(82, 82, 82, 0.659);
+}
+
+.start-lomda-btn {
+  margin-bottom: 20vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .titles-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 13vh;
+    height: 30vh;
+  }
+
+  .opening-titles {
+    font-family: title;
+  }
+
+  .opening-title1 {
+    font-size: 14vw;
+    /* margin-top: 5vh; */
+  }
+
+  .opening-title2 {
+    font-size: 10vw;
+    margin-top: 1vh;
+  }
+
+  .btns {
+    width: 40vw;
+    height: 6vh;
+    border-radius: 3em;
+    font-size: 8vw;
+    cursor: pointer;
+  }
+
+  .start-lomda-btn {
+    min-width: 49vw;
+    min-height: 8vh;
+    margin-bottom: 20vh;
+    font-family: bold-text;
+    color: #0093e9;
+    font-size: 8vw;
+    position: relative;
+    top: 0vh;
+    width: fit-content;
+    height: fit-content;
+  }
+}

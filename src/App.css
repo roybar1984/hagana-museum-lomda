@@ -1,0 +1,29 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* border: solid pink; */
+  height: 100vh;
+  overflow: hidden;
+  direction: rtl;
+  background-color: lightblue;
+  background-size: 100% 100%;
+  /* background: #a5eaf0b6; */
+}
+
+.bold-text {
+  font-weight: 800;
+}
