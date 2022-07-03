@@ -10,17 +10,19 @@
   width: 13vw;
   height: 7vh;
   background-size: 100% 100%;
-  transform: scaleX(-1);
+  /* transform: scaleX(-1); */
   position: relative;
   right: 34vw;
   top: 3vh;
 }
 
 .mission-title {
-  position: relative;
-  font-size: 8vw;
-  width: 97%;
-  top: -3vh;
+  position: absolute;
+  font-family: text-font-bold;
+  font-weight: 900;
+  font-size: 12vw;
+  /* width: 97%; */
+  top: 0vh;
   margin-bottom: 5vh;
   margin-top: 4vh;
 }
@@ -37,6 +39,24 @@
   position: relative;
   right: -16vw;
   top: -3vh;
+}
+
+.character-gif {
+  width: 54%;
+  position: relative;
+  top: 2vh;
+}
+
+.text {
+  font-family: text-font;
+}
+
+.intro-text {
+  font-size: 9vw;
+  width: 90%;
+  font-weight: 500;
+  position: relative;
+  top: 2vh;
 }
 
 /*

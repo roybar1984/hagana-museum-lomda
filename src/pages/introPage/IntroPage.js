@@ -3,8 +3,11 @@ import { useNavigate } from "react-router-dom";
 import "./IntroPage.css";
 import { gsap } from "gsap";
 import SpeechBubble from "../../components/speechBubble/SpeachBubble";
-import Character from "../../components/speechBubble/character/Character";
+// import Character from "../../components/speechBubble/character/Character";
 import { Markup } from "interweave";
+import gif from "../../media/gifs/Soldier-talking.gif";
+import NextBtn from "../../components/nextBtn/NextBtn";
+// import CharacterCircle from "../../components/characterCircle/CharacterCircle";
 // import AnimatedPage from "../../components/AnimatedPage";
 // import { motion } from "framer-motion";
 // import Button from "../../components/Button/Button";
@@ -98,8 +101,13 @@ function IntroPage(props) {
       <h1 className="mission-title">
         <Markup content={props.Data[props.textIndex].title} />
       </h1>
+      <img className="character-gif" src={gif} alt="loading..." />
+      <p className="text intro-text">
+        <Markup content={props.Data[props.textIndex].bubbleText1} />
+      </p>
+      <NextBtn />
       {/* )} */}
-      <SpeechBubble
+      {/* <SpeechBubble
         delay={1}
         duration={3}
         animationY={220}
@@ -122,7 +130,7 @@ function IntroPage(props) {
             "pre-mission-bubbles "} ${props.textIndex === 4 &&
             "feel-ready-bubble"}`}
         />
-      )}
+      )} */}
 
       {/* {!props.Data[props.textIndex].btnText ? (
         // <motion.div
@@ -175,10 +183,11 @@ function IntroPage(props) {
         </motion.div>
       )} */}
 
-      <Character
+      {/* <CharacterCircle /> */}
+      {/* <Character
         isPreMissionPages={props.isPreMissionPages}
         textIndex={props.textIndex}
-      />
+      /> */}
     </div>
     // </AnimatedPage>
   );

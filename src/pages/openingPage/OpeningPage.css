@@ -1,3 +1,13 @@
+/* @font-face {
+  font-family: title;
+  src: url(./../../fonts/benchmark-regular-fm.otf);
+}
+
+@font-face {
+  font-family: text-font;
+  src: url(./../../fonts/FbSpoiler-Regular.otf);
+} */
+
 .titles-container {
   display: flex;
   flex-direction: column;
@@ -6,7 +16,7 @@
 }
 
 .opening-titles {
-  /* font-family: title; */
+  font-family: title;
   color: #d3e6f7;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
@@ -14,11 +24,11 @@
 }
 
 .opening-title1 {
-  font-size: 11vw;
+  font-size: 21vw;
 }
 
 .opening-title2 {
-  font-size: 8vw;
+  font-size: 15vw;
   margin-top: 0;
 }
 
@@ -48,13 +58,14 @@
   }
 
   .opening-title1 {
-    font-size: 14vw;
+    font-size: 21vw;
+    margin-top: 11vh;
     /* margin-top: 5vh; */
   }
 
   .opening-title2 {
-    font-size: 10vw;
-    margin-top: 1vh;
+    font-size: 15vw;
+    margin-top: -4vh;
   }
 
   .btns {
@@ -66,15 +77,21 @@
   }
 
   .start-lomda-btn {
-    min-width: 49vw;
-    min-height: 8vh;
+    min-width: 53vw;
+    min-height: 4vh;
+    padding: 0.2em;
     margin-bottom: 20vh;
-    font-family: bold-text;
-    color: #0093e9;
+    font-family: text-font;
+    font-weight: 900;
+    border: solid #1b1464 1.2vw;
+    color: #1b1464;
     font-size: 8vw;
+    background-color: rgba(255, 255, 255, 0);
     position: relative;
-    top: 0vh;
+    top: -4vh;
+    width: -moz-fit-content;
     width: fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
 }

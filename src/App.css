@@ -1,3 +1,18 @@
+@font-face {
+  font-family: title;
+  src: url(./../src/fonts/benchmark-regular-fm.otf);
+}
+
+@font-face {
+  font-family: text-font;
+  src: url(./../src/fonts/FbSpoiler-Regular.otf);
+}
+
+@font-face {
+  font-family: text-font-bold;
+  src: url(./../src/fonts/FbSpoiler-Bold.otf);
+}
+
 html,
 body {
   width: 100%;
@@ -19,11 +34,16 @@ body {
   height: 100vh;
   overflow: hidden;
   direction: rtl;
-  background-color: lightblue;
+  background-image: url(./media/openingBackground.png);
   background-size: 100% 100%;
   /* background: #a5eaf0b6; */
 }
 
+.text {
+  font-family: text-font;
+  color: #1b1464;
+}
+
 .bold-text {
-  font-weight: 800;
+  font-weight: 900;
 }
