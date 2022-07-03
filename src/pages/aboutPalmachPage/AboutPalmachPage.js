@@ -9,7 +9,10 @@ function AboutPalmachPage(props) {
         <Markup content={props.Data[props.textIndex].title} />
       </h1>
       <div className="scroll-text-container text">
-        <Markup content={props.Data[3].text} />
+        <div className="scroll-text">
+          {" "}
+          <Markup content={props.Data[3].text} />
+        </div>
       </div>
     </div>
   );
