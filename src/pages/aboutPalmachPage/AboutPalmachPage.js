@@ -1,6 +1,7 @@
 import React from "react";
 import "./AboutPalmachPage.css";
 import { Markup } from "interweave";
+import eyeGif from "./../../media/gifs/Soldier-talking.gif";
 
 function AboutPalmachPage(props) {
   return (
@@ -14,6 +15,7 @@ function AboutPalmachPage(props) {
           <Markup content={props.Data[3].text} />
         </div>
       </div>
+      <img className="character-gif small-gif" src={eyeGif} alt="loading..." />
     </div>
   );
 }

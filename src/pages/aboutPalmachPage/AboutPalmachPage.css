@@ -29,3 +29,10 @@
   padding-bottom: 1vh;
   padding-top: 1vh;
 }
+
+.small-gif {
+  width: 34%;
+  transform: scaleX(-1);
+  top: 10vh;
+  right: -29vw;
+}
