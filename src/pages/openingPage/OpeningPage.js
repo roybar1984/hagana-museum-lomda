@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import "./OpeningPage.css";
 import { gsap } from "gsap";
 import { useNavigate } from "react-router-dom";

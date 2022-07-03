@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./IntroPage.css";
 import { gsap } from "gsap";
@@ -32,6 +32,23 @@ function IntroPage(props) {
   };
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    props.setTextIndex(1);
+  }, []);
+
+  const handleClickNext = (event) => {
+    if (props.textIndex === 2) {
+      console.log("now is the long text");
+      navigate("/aboutPalmach", { replace: true });
+    }
+    props.setTextIndex(props.textIndex + 1);
+  };
+
+  // const handleClickPrevText = (event) => {
+  //   props.setTextIndex(3);
+  //   navigate("/intro", { replace: true });
+  // };
 
   //   const handleClickNext = (event) => {
   //     //if the btn is vissible move to the rellevant page
@@ -103,10 +120,9 @@ function IntroPage(props) {
       </h1>
       <img className="character-gif" src={gif} alt="loading..." />
       <p className="text intro-text">
-        <Markup content={props.Data[props.textIndex].bubbleText1} />
+        <Markup content={props.Data[props.textIndex].text} />
       </p>
-      <NextBtn />
-      {/* )} */}
+      <NextBtn handleClickNext={handleClickNext} />
       {/* <SpeechBubble
         delay={1}
         duration={3}
@@ -165,31 +181,7 @@ function IntroPage(props) {
       >
         {props.Data[props.textIndex].btnText}
       </motion.button> */}
-      {/* )
-      ) */}
-      {/* } */}
-      {/* {props.isPreMissionPages && props.Data[props.textIndex].btnText2 && (
-        <motion.div
-          variants={btnAnimations}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{ duration: 2, delay: 6 }}
-          className="back-to-explenation-btn"
-          onClick={handleClickPrevText}
-        >
-          {" "}
-          {props.Data[props.textIndex].btnText2}
-        </motion.div>
-      )} */}
-
-      {/* <CharacterCircle /> */}
-      {/* <Character
-        isPreMissionPages={props.isPreMissionPages}
-        textIndex={props.textIndex}
-      /> */}
     </div>
-    // </AnimatedPage>
   );
 }
 

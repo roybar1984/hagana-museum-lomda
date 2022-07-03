@@ -4,6 +4,7 @@ import OpeningPage from "./pages/openingPage/OpeningPage";
 import IntroPage from "./pages/introPage/IntroPage";
 import Data from "./data/text.json";
 import "./App.css";
+import AboutPalmachPage from "./pages/aboutPalmachPage/AboutPalmachPage";
 
 function App() {
   const [textIndex, setTextIndex] = useState(1);
@@ -35,6 +36,24 @@ function App() {
             path="/intro"
             element={
               <IntroPage
+                Data={Data}
+                textIndex={textIndex}
+                setTextIndex={setTextIndex}
+                // isHidden={isHidden}
+                // setIsHidden={setIsHidden}
+                // wait={800}
+                // isPreMissionPages={isPreMissionPages}
+                // setIsPreMissionPages={setIsPreMissionPages}
+                // isStarted={isStarted}
+                // setIsStarted={setIsStarted}
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/aboutPalmach"
+            element={
+              <AboutPalmachPage
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}

@@ -1,0 +1,9 @@
+.scroll-text-container {
+  font-size: 8vw;
+  width: 90%;
+  text-align: right;
+  height: 59vh;
+  position: relative;
+  overflow: scroll;
+  top: -7vh;
+}
