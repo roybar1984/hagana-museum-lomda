@@ -67,7 +67,7 @@
 
 .answer-container {
   width: 60vw;
-  height: 45vh;
+  min-height: 45vh;
   border: solid #1b1464 1vw;
   border-radius: 3em;
   font-size: 6.7vw;
@@ -81,6 +81,8 @@
   font-weight: 900;
   position: relative;
   top: -4vh;
+  height: fit-content;
+  padding-top: 1em;
 }
 
 .number-input {
@@ -95,7 +97,7 @@
   background-color: rgba(255, 255, 255, 0);
   border-bottom: solid #1b1464 0.2em;
   position: relative;
-  top: -7vh;
+  top: -10vh;
   text-align: center;
 }
 
@@ -109,8 +111,9 @@
 
 .feedback-text {
   position: absolute;
-  top: 44vh;
+  top: 48vh;
   font-family: bold-text;
+  font-size: 8vw;
 }
 
 .feedback-text-correct {

@@ -24,7 +24,7 @@
 
 .mission-title {
   position: absolute;
-  font-family: text-font-bold;
+  font-family: bold-text;
   font-weight: 900;
   font-size: 12vw;
   /* width: 97%; */
