@@ -1,7 +1,8 @@
 import React from "react";
 import "./AboutPalmachPage.css";
 import { Markup } from "interweave";
-import eyeGif from "./../../media/gifs/Soldier-talking.gif";
+import eyeGif from "./../../media/gifs/Soldier not talking.gif";
+import NextBtn from "../../components/nextBtn/NextBtn";
 
 function AboutPalmachPage(props) {
   return (
@@ -15,7 +16,16 @@ function AboutPalmachPage(props) {
           <Markup content={props.Data[3].text} />
         </div>
       </div>
-      <img className="character-gif small-gif" src={eyeGif} alt="loading..." />
+      <div className="chracter-btn-container">
+        <img
+          className="character-gif small-gif"
+          src={eyeGif}
+          alt="loading..."
+        />
+        <button className="btns start-lomda-btn start-mission-btn">
+          למשימה
+        </button>
+      </div>
     </div>
   );
 }

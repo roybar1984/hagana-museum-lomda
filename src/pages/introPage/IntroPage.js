@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./IntroPage.css";
 import { gsap } from "gsap";
-import SpeechBubble from "../../components/speechBubble/SpeachBubble";
 // import Character from "../../components/speechBubble/character/Character";
 import { Markup } from "interweave";
 import gif from "../../media/gifs/Soldier-talking.gif";

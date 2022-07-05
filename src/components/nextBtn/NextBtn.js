@@ -1,4 +1,5 @@
 import React from "react";
+import "./NextBtn.css";
 
 function NextBtn(props) {
   return (

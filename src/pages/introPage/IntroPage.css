@@ -7,13 +7,19 @@
 
 .next-btn {
   /* background-image: url("."); */
+  /* width: 13vw;
+  height: 7vh;
+  background-size: 100% 100%;
+  position: relative;
+  right: 34vw;
+  top: 3vh; */
   width: 13vw;
   height: 7vh;
   background-size: 100% 100%;
   /* transform: scaleX(-1); */
-  position: relative;
-  right: 34vw;
-  top: 3vh;
+  position: absolute;
+  right: 78vw;
+  bottom: 7vh;
 }
 
 .mission-title {
@@ -25,6 +31,7 @@
   top: 0vh;
   margin-bottom: 5vh;
   margin-top: 4vh;
+  color: #1b1464;
 }
 
 .start-mission-btn {
