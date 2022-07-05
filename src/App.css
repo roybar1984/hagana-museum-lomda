@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: text-font-bold;
+  font-family: bold-text;
   src: url(./../src/fonts/FbSpoiler-Bold.otf);
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .bold-text {
-  font-family: text-font-bold;
+  font-family: bold-text;
   font-weight: 900;
 }
 

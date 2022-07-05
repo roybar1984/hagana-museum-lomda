@@ -5,9 +5,12 @@ import { Markup } from "interweave";
 import TextBtn from "./../../components/textBtn/TextBtn";
 import InfoIcon from "../../components/infoIcon/InfoIcon";
 import BackBtn from "../../components/backBtn/BackBtn";
+import NextBtn from "../../components/nextBtn/NextBtn";
 
 function Mission1(props) {
   const [isInfoShowed, setIsInfoShowed] = useState(true);
+  const [isCorrect, setIsCorrect] = useState();
+  const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     props.setTextIndex(4);
@@ -23,6 +26,18 @@ function Mission1(props) {
     }
   };
 
+  const handleChangeAnswer = (event) => {
+    setIsClicked(true);
+    if (event.target.value === "") {
+      setIsClicked(false);
+    }
+
+    if (event.target.value === props.Data[4].answer) {
+      setIsCorrect(true);
+    } else {
+      setIsCorrect(false);
+    }
+  };
   return (
     <div className="mission-container">
       <h1 className="mission-title">
@@ -62,7 +77,30 @@ function Mission1(props) {
 
       <div className="answer-container ">
         <Markup content={props.Data[4].missionText} />
+        <input
+          className={`number-input  ${isCorrect && "correct"} ${isClicked &&
+            !isCorrect &&
+            "wrong"} ${!isClicked && isCorrect === "" && "number-input"}`}
+          placeholder="מספר"
+          type="number"
+          onChange={handleChangeAnswer}
+        ></input>
+        {isClicked && (
+          <p
+            className={`feedback-text ${
+              isCorrect ? "feedback-text-correct" : "feedback-text-wrong"
+            } `}
+          >
+            {isCorrect ? "כל הכבוד!" : "נסו שוב"}
+          </p>
+        )}
       </div>
+      {isCorrect && (
+        <NextBtn
+          textIndex={props.textIndex}
+          setTextIndex={props.setTextIndex}
+        />
+      )}
     </div>
   );
 }

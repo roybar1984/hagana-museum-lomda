@@ -82,3 +82,41 @@
   position: relative;
   top: -4vh;
 }
+
+.number-input {
+  width: 14vw;
+  /* width: fit-content; */
+  height: 3vh;
+  font-size: 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: solid #1b1464 0.2em;
+  position: relative;
+  top: -7vh;
+  text-align: center;
+}
+
+.correct {
+  background-color: #39b54a;
+}
+
+.wrong {
+  background-color: #ed1c24;
+}
+
+.feedback-text {
+  position: absolute;
+  top: 44vh;
+  font-family: bold-text;
+}
+
+.feedback-text-correct {
+  color: #39b54a;
+}
+
+.feedback-text-wrong {
+  color: #ed1c24;
+}
