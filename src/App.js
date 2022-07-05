@@ -5,6 +5,7 @@ import IntroPage from "./pages/introPage/IntroPage";
 import Data from "./data/text.json";
 import "./App.css";
 import AboutPalmachPage from "./pages/aboutPalmachPage/AboutPalmachPage";
+import Mission1 from "./pages/mission1/Mission1";
 
 function App() {
   const [textIndex, setTextIndex] = useState(1);
@@ -54,6 +55,24 @@ function App() {
             path="/aboutPalmach"
             element={
               <AboutPalmachPage
+                Data={Data}
+                textIndex={textIndex}
+                setTextIndex={setTextIndex}
+                // isHidden={isHidden}
+                // setIsHidden={setIsHidden}
+                // wait={800}
+                // isPreMissionPages={isPreMissionPages}
+                // setIsPreMissionPages={setIsPreMissionPages}
+                // isStarted={isStarted}
+                // setIsStarted={setIsStarted}
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/mission1"
+            element={
+              <Mission1
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}

@@ -36,6 +36,8 @@ body {
   direction: rtl;
   background-image: url(./media/openingBackground.png);
   background-size: 100% 100%;
+  font-family: text-font;
+
   /* background: #a5eaf0b6; */
 }
 
@@ -45,5 +47,15 @@ body {
 }
 
 .bold-text {
+  font-family: text-font-bold;
   font-weight: 900;
+}
+
+.btns {
+  width: 16vw;
+  height: 5vh;
+  border-radius: 3em;
+  font-size: 2.5vw;
+  cursor: pointer;
+  border: solid rgba(82, 82, 82, 0.659);
 }

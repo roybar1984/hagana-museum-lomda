@@ -38,8 +38,8 @@ function IntroPage(props) {
 
   const handleClickNext = (event) => {
     if (props.textIndex === 2) {
-      console.log("now is the long text");
-      navigate("/aboutPalmach", { replace: true });
+      navigate("/aboutPalmach");
+      props.setTextIndex(props.textIndex + 1);
     }
     props.setTextIndex(props.textIndex + 1);
   };

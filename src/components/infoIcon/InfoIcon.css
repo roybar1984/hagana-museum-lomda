@@ -1,0 +1,16 @@
+.info-icon {
+  fill: #1b1464;
+  position: absolute;
+  top: 10vh;
+  right: 77vw;
+}
+
+.info-icon-hidden {
+  visibility: hidden;
+  /* display: none; */
+}
+
+.info-icon-showed {
+  visibility: visible;
+  /* display: block; */
+}
