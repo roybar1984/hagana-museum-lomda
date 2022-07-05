@@ -19,10 +19,10 @@
   background-color: #1b1464;
   color: white;
   font-weight: 500;
-  position: relative;
-  top: -14vh;
+  position: absolute;
+  top: 12vh;
   padding-bottom: 0.5em;
-  visibility: visible;
+  z-index: 1;
 }
 
 .info-container-hidden {
@@ -51,4 +51,34 @@
   justify-content: center;
   position: relative;
   top: 3vh;
+}
+
+.info-container-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.504);
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer-container {
+  width: 60vw;
+  height: 45vh;
+  border: solid #1b1464 1vw;
+  border-radius: 3em;
+  font-size: 6.7vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1em;
+  padding-left: 1em;
+  color: #1b1464;
+  font-weight: 900;
+  position: relative;
+  top: -4vh;
 }

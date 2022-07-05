@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AboutPalmachPage.css";
 import { Markup } from "interweave";
 import { useNavigate } from "react-router-dom";
@@ -6,6 +6,10 @@ import eyeGif from "./../../media/gifs/Soldier not talking.gif";
 import BackBtn from "../../components/backBtn/BackBtn";
 
 function AboutPalmachPage(props) {
+  useEffect(() => {
+    props.setTextIndex(3);
+  }, []);
+
   const navigate = useNavigate();
   const [isFinishedScrolling, setIsFinishedScrolling] = useState(false);
 
@@ -28,7 +32,7 @@ function AboutPalmachPage(props) {
     <div className="bubble-container">
       <BackBtn textIndex={props.textIndex} setTextIndex={props.setTextIndex} />
       <h1 className="mission-title">
-        <Markup content={props.Data[props.textIndex].title} />
+        <Markup content={props.Data[3].title} />
       </h1>
       <div onScroll={handleScroll} className="scroll-text-container text">
         <div className="scroll-text">

@@ -10,6 +10,7 @@ function Mission1(props) {
   const [isInfoShowed, setIsInfoShowed] = useState(true);
 
   useEffect(() => {
+    props.setTextIndex(4);
     setIsInfoShowed(true);
   }, []);
 
@@ -38,18 +39,29 @@ function Mission1(props) {
       ></div>
 
       <div
-        className={`info-container ${
-          isInfoShowed ? "info-container-showed" : "info-container-hidden"
+        className={`info-container-wrapper ${
+          // !isHintShowed ? "hint-container-showed" : "hint-container-hidden"
+          isInfoShowed ? "info-container-showed " : "info-container-hidden"
         }`}
       >
-        <Markup content={props.Data[4].instruction} />
-        <button
-          onClick={handleCloseInfo}
-          //   ref={openingBtn}
-          className="btns understand-btn"
+        <div
+          className="info-container"
+
+          // isInfoShowed ? "info-container-showed" : "info-container-hidden"
         >
-          <Markup content={props.Data[4].btnText} />
-        </button>
+          <Markup content={props.Data[4].instruction} />
+          <button
+            onClick={handleCloseInfo}
+            //   ref={openingBtn}
+            className="btns understand-btn"
+          >
+            <Markup content={props.Data[4].btnText} />
+          </button>
+        </div>
+      </div>
+
+      <div className="answer-container ">
+        <Markup content={props.Data[4].missionText} />
       </div>
     </div>
   );

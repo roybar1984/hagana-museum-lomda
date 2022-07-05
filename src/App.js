@@ -24,11 +24,14 @@ function App() {
             path="/"
             element={
               <OpeningPage
-              // Data={Data}
-              // isPreMissionPages={isPreMissionPages}
-              // setIsPreMissionPages={setIsPreMissionPages}
-              // isStarted={setIsStarted}
-              // setIsStarted={setIsStarted}
+                Data={Data}
+                textIndex={textIndex}
+                setTextIndex={setTextIndex}
+                // Data={Data}
+                // isPreMissionPages={isPreMissionPages}
+                // setIsPreMissionPages={setIsPreMissionPages}
+                // isStarted={setIsStarted}
+                // setIsStarted={setIsStarted}
               />
             }
           ></Route>

@@ -8,8 +8,10 @@ function BackBtn(props) {
     <div>
       <svg
         onClick={() => {
-          navigate(-1);
-          props.setTextIndex(props.textIndex - 1);
+          if (props.textIndex > 0) {
+            props.setTextIndex(props.textIndex - 1);
+            navigate(-1);
+          }
         }}
         className="back-btn"
         xmlns="http://www.w3.org/2000/svg"
