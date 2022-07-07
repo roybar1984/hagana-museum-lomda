@@ -5,7 +5,7 @@ function NextBtn(props) {
   return (
     <svg
       id="Layer_2"
-      className="next-btn"
+      className={`next-btn fade-animation ${props.className} `}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 146.2 146.2"
       onClick={props.handleClickNext}

@@ -5,11 +5,12 @@ import { Markup } from "interweave";
 function TextBtn(props) {
   return (
     <button
-      //   onClick={handleStartLomda}
+      onClick={props.handleClick}
       //   ref={openingBtn}
-      className="btns start-lomda-btn"
+      className={`btns start-lomda-btn ${props.className} `}
     >
-      <Markup content={props.Data[props.textIndex].btnText} />
+      {props.btnText}
+      {/* <Markup content={props.Data[props.textIndex].btnText} /> */}
     </button>
   );
 }

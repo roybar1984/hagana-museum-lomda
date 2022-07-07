@@ -6,19 +6,33 @@ import TextBtn from "./../../components/textBtn/TextBtn";
 import InfoIcon from "../../components/infoIcon/InfoIcon";
 import BackBtn from "../../components/backBtn/BackBtn";
 import NextBtn from "../../components/nextBtn/NextBtn";
+import { useNavigate } from "react-router-dom";
+import InputField from "../../components/inputField/InputField";
 
 function Mission1(props) {
+  const navigate = useNavigate();
+
   const [isInfoShowed, setIsInfoShowed] = useState(true);
   const [isCorrect, setIsCorrect] = useState();
   const [isClicked, setIsClicked] = useState(false);
+  const [isMissionDone, setIsMissionDone] = useState(false);
 
   useEffect(() => {
     props.setTextIndex(4);
     setIsInfoShowed(true);
+
+    return () => {
+      setIsInfoShowed(false);
+    };
   }, []);
 
+  // useEffect(() => {
+  //   if (isMissionDone) {
+  //     setIsInfoShowed(false);
+  //   }
+  // }, [isMissionDone]);
+
   const handleCloseInfo = (event) => {
-    console.log("gs");
     if (!isInfoShowed) {
       setIsInfoShowed(true);
     } else {
@@ -37,6 +51,11 @@ function Mission1(props) {
     } else {
       setIsCorrect(false);
     }
+  };
+
+  const handleMoveMission2 = (event) => {
+    setIsMissionDone(true);
+    navigate("/mission2");
   };
   return (
     <div className="mission-container">
@@ -78,11 +97,12 @@ function Mission1(props) {
       <div className="answer-container ">
         <Markup content={props.Data[4].missionText} />
         <input
+          maxLength={2}
           className={`number-input  ${isCorrect && "correct"} ${isClicked &&
             !isCorrect &&
             "wrong"} ${!isClicked && isCorrect === "" && "number-input"}`}
-          placeholder="מספר"
-          type="number"
+          placeholder={"מספר"}
+          type={"number"}
           onChange={handleChangeAnswer}
         ></input>
         {isClicked && (
@@ -99,6 +119,7 @@ function Mission1(props) {
         <NextBtn
           textIndex={props.textIndex}
           setTextIndex={props.setTextIndex}
+          handleClickNext={handleMoveMission2}
         />
       )}
     </div>

@@ -1,0 +1,54 @@
+.mission2-container {
+  margin-bottom: 25vh;
+}
+
+.mission-title {
+  position: absolute;
+  font-family: bold-text;
+  font-weight: 900;
+  font-size: 12vw;
+  /* width: 97%; */
+  top: 0vh;
+  margin-bottom: 5vh;
+  margin-top: 6vh;
+  color: #1b1464;
+}
+
+.mission-instruction-paragraph {
+  font-size: 7vw;
+  width: 85vw;
+  font-family: text-font;
+  font-weight: 600;
+  position: relative;
+}
+
+.input-fields-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 20vh;
+}
+
+.input-mission2 {
+  border-radius: 1em;
+  font-family: text-font;
+  font-weight: 600;
+  color: #1b1464;
+  background-color: rgb(255 255 255 / 37%);
+  border: none;
+  padding: 0.5em;
+  font-size: 6vw;
+  text-align: center;
+  width: 70vw;
+  height: 3vh;
+}
+
+.answer-paragraph {
+  position: absolute;
+  color: #4eb233;
+  font-size: 8vw;
+  top: 55vh;
+  font-weight: 900;
+}

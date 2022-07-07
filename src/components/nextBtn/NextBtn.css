@@ -2,6 +2,20 @@
   fill: #1b1464;
 }
 
+
+.fade-animation {
+    animation: show 3s ease;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
 /* .next-btn {
   position: absolute;
   width: 18vw;

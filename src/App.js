@@ -6,15 +6,16 @@ import Data from "./data/text.json";
 import "./App.css";
 import AboutPalmachPage from "./pages/aboutPalmachPage/AboutPalmachPage";
 import Mission1 from "./pages/mission1/Mission1";
+import Mission2 from "./pages/mission2/Mission2";
+
 
 function App() {
   const [textIndex, setTextIndex] = useState(1);
 
   useEffect(() => {
-    // setIsHidden("hidden");
     setTextIndex(1);
-    // setIsPreMissionPages(false);
   }, []);
+
   return (
     <div className="App">
       <Router>
@@ -27,11 +28,6 @@ function App() {
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
-                // Data={Data}
-                // isPreMissionPages={isPreMissionPages}
-                // setIsPreMissionPages={setIsPreMissionPages}
-                // isStarted={setIsStarted}
-                // setIsStarted={setIsStarted}
               />
             }
           ></Route>
@@ -43,13 +39,6 @@ function App() {
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
-                // isHidden={isHidden}
-                // setIsHidden={setIsHidden}
-                // wait={800}
-                // isPreMissionPages={isPreMissionPages}
-                // setIsPreMissionPages={setIsPreMissionPages}
-                // isStarted={isStarted}
-                // setIsStarted={setIsStarted}
               />
             }
           ></Route>
@@ -61,13 +50,6 @@ function App() {
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
-                // isHidden={isHidden}
-                // setIsHidden={setIsHidden}
-                // wait={800}
-                // isPreMissionPages={isPreMissionPages}
-                // setIsPreMissionPages={setIsPreMissionPages}
-                // isStarted={isStarted}
-                // setIsStarted={setIsStarted}
               />
             }
           ></Route>
@@ -79,13 +61,17 @@ function App() {
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
-                // isHidden={isHidden}
-                // setIsHidden={setIsHidden}
-                // wait={800}
-                // isPreMissionPages={isPreMissionPages}
-                // setIsPreMissionPages={setIsPreMissionPages}
-                // isStarted={isStarted}
-                // setIsStarted={setIsStarted}
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/mission2"
+            element={
+              <Mission2
+                Data={Data}
+                textIndex={textIndex}
+                setTextIndex={setTextIndex}
               />
             }
           ></Route>

@@ -37,6 +37,7 @@ body {
   background-image: url(./media/openingBackground.png);
   background-size: 100% 100%;
   font-family: text-font;
+  color: #1b1464;
 
   /* background: #a5eaf0b6; */
 }
@@ -49,6 +50,10 @@ body {
 .bold-text {
   font-family: bold-text;
   font-weight: 900;
+}
+
+.larger-text {
+  font-size: larger;
 }
 
 .btns {

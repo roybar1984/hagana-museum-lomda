@@ -22,7 +22,6 @@ function AboutPalmachPage(props) {
   };
 
   const handleClickMission1 = (e) => {
-    console.log("textIndex: " + props.textIndex);
     props.setTextIndex(props.textIndex + 1);
     navigate("/mission1");
     // navigate(1);
@@ -49,7 +48,7 @@ function AboutPalmachPage(props) {
         {isFinishedScrolling && (
           <button
             onClick={handleClickMission1}
-            className="btns start-lomda-btn start-mission-btn"
+            className="btns start-lomda-btn start-mission-btn fade-animation"
           >
             למשימה
           </button>
