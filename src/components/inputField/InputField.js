@@ -13,6 +13,7 @@ function InputField(props) {
     <input
       className={props.className}
       maxLength={props.maxLength}
+      readOnly={props.readOnly}
       placeholder={props.placeholder}
       type={props.type}
       onChange={(event) => {

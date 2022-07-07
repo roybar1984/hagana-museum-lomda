@@ -9,16 +9,17 @@ import TextBtn from "../../components/textBtn/TextBtn";
 
 function Mission2(props) {
   const navigate = useNavigate();
-  const [isFinished, setisFinished] = useState(false);
+  const [isFinished, setIsFinished] = useState(false);
   const [ans1, setAns1] = useState("");
   const [ans2, setAns2] = useState("");
   const [isBothSubmitted, setIsBothSubmitted] = useState(false);
   const [isOneSubmitted, setIsOneSubmitted] = useState(false);
+  const [readOnly, setReadOnly] = useState(false);
 
   useEffect(() => {
     props.setTextIndex(5);
 
-    // setisFinished(JSON.parse(window.localStorage.getItem("isFinished")));
+    // setIsFinished(JSON.parse(window.localStorage.getItem("isFinished")));
   }, []);
 
   //   useEffect(() => {
@@ -28,7 +29,9 @@ function Mission2(props) {
   //   }, [isBothSubmitted]);
 
   const handleCheckMission2 = (event) => {
-    setisFinished(true);
+    setIsFinished(true);
+    setReadOnly(true);
+    //  inputRef.current.blur();
   };
 
   const handleMoveMission3 = (event) => {
@@ -60,6 +63,8 @@ function Mission2(props) {
           setIsBothSubmitted={setIsBothSubmitted}
           isOneSubmitted={isOneSubmitted}
           setIsOneSubmitted={setIsOneSubmitted}
+          readOnly={readOnly}
+          setReadOnly={setReadOnly}
         />
         <InputField
           className="input-mission2"
@@ -73,6 +78,8 @@ function Mission2(props) {
           setIsBothSubmitted={setIsBothSubmitted}
           isOneSubmitted={isOneSubmitted}
           setIsOneSubmitted={setIsOneSubmitted}
+          readOnly={readOnly}
+          setReadOnly={setReadOnly}
         />
       </div>
       {/* {isBothSubmitted && (

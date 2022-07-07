@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Mission1.css";
 import { Markup } from "interweave";
 import TextBtn from "./../../components/textBtn/TextBtn";
@@ -11,11 +11,13 @@ import InputField from "../../components/inputField/InputField";
 
 function Mission1(props) {
   const navigate = useNavigate();
+  const inputRef = useRef();
 
   const [isInfoShowed, setIsInfoShowed] = useState(true);
   const [isCorrect, setIsCorrect] = useState();
   const [isClicked, setIsClicked] = useState(false);
   const [isMissionDone, setIsMissionDone] = useState(false);
+  const [readOnly, setReadOnly] = useState(false);
 
   useEffect(() => {
     props.setTextIndex(4);
@@ -48,6 +50,8 @@ function Mission1(props) {
 
     if (event.target.value === props.Data[4].answer) {
       setIsCorrect(true);
+      setReadOnly(true);
+      inputRef.current.blur();
     } else {
       setIsCorrect(false);
     }
@@ -97,13 +101,15 @@ function Mission1(props) {
       <div className="answer-container ">
         <Markup content={props.Data[4].missionText} />
         <input
+          ref={inputRef}
           maxLength={2}
-          className={`number-input  ${isCorrect && "correct"} ${isClicked &&
-            !isCorrect &&
-            "wrong"} ${!isClicked && isCorrect === "" && "number-input"}`}
+          className={`number-input  ${isCorrect && "correct"} ${
+            isClicked && !isCorrect && "wrong"
+          } ${!isClicked && isCorrect === "" && "number-input"}`}
           placeholder={"מספר"}
           type={"number"}
           onChange={handleChangeAnswer}
+          readOnly={readOnly}
         ></input>
         {isClicked && (
           <p
