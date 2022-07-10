@@ -18,19 +18,35 @@ function Mission1(props) {
   const [isClicked, setIsClicked] = useState(false);
   const [isMissionDone, setIsMissionDone] = useState(false);
   const [readOnly, setReadOnly] = useState(false);
+  const [correctAns, setCorrectAns] = useState(12);
+
+  // useEffect(() => {
+  //   props.setTextIndex(5);
+
+  //   // setIsFinished(JSON.parse(window.localStorage.getItem("isFinished")));
+  //   // setCorrectAns(JSON.parse(window.localStorage.getItem("correctAns")));
+  //   // localStorage.setItem("correctAns", JSON.stringify(correctAns));
+  // }, []);
+
+  //   useEffect(() => {
+  //     if (isBothSubmitted === true) {
+  //       window.localStorage.setItem("isFinished", true);
+  //     }
+  //   }, [isBothSubmitted]);
 
   useEffect(() => {
     props.setTextIndex(4);
     setIsInfoShowed(true);
+    // setIsInfoShowed(JSON.parse(window.localStorage.getItem("isInfoShowed")));
 
-    return () => {
-      setIsInfoShowed(false);
-    };
+    // return () => {
+    //   setIsInfoShowed(false);
+    // };
   }, []);
 
   // useEffect(() => {
-  //   if (isMissionDone) {
-  //     setIsInfoShowed(false);
+  //   if (isMissionDone === true) {
+  //     window.localStorage.setItem("isInfoShowed", false);
   //   }
   // }, [isMissionDone]);
 

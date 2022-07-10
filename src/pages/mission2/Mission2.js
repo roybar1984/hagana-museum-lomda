@@ -12,21 +12,14 @@ function Mission2(props) {
   const [isFinished, setIsFinished] = useState(false);
   const [ans1, setAns1] = useState("");
   const [ans2, setAns2] = useState("");
-  const [isBothSubmitted, setIsBothSubmitted] = useState(false);
-  const [isOneSubmitted, setIsOneSubmitted] = useState(false);
   const [readOnly, setReadOnly] = useState(false);
+  const [isInputClicked, setIsInputClicked] = useState(false);
 
   useEffect(() => {
     props.setTextIndex(5);
 
     // setIsFinished(JSON.parse(window.localStorage.getItem("isFinished")));
   }, []);
-
-  //   useEffect(() => {
-  //     if (isBothSubmitted === true) {
-  //       window.localStorage.setItem("isFinished", true);
-  //     }
-  //   }, [isBothSubmitted]);
 
   const handleCheckMission2 = (event) => {
     setIsFinished(true);
@@ -59,12 +52,10 @@ function Mission2(props) {
           answer={ans1}
           setAnswer={setAns1}
           textIndex={props.textIndex}
-          isBothSubmitted={isBothSubmitted}
-          setIsBothSubmitted={setIsBothSubmitted}
-          isOneSubmitted={isOneSubmitted}
-          setIsOneSubmitted={setIsOneSubmitted}
           readOnly={readOnly}
           setReadOnly={setReadOnly}
+          isInputClicked={isInputClicked}
+          setIsInputClicked={setIsInputClicked}
         />
         <InputField
           className="input-mission2"
@@ -74,22 +65,14 @@ function Mission2(props) {
           answer={ans2}
           setAnswer={setAns2}
           textIndex={props.textIndex}
-          isBothSubmitted={isBothSubmitted}
-          setIsBothSubmitted={setIsBothSubmitted}
-          isOneSubmitted={isOneSubmitted}
-          setIsOneSubmitted={setIsOneSubmitted}
           readOnly={readOnly}
           setReadOnly={setReadOnly}
+          isInputClicked={isInputClicked}
+          setIsInputClicked={setIsInputClicked}
         />
       </div>
-      {/* {isBothSubmitted && (
-        <NextBtn
-          textIndex={props.textIndex}
-          handleClickNext={handleMoveMission3}
-        />
-      )} */}
 
-      {isBothSubmitted && !isFinished && (
+      {ans1 && ans2 && !isFinished && (
         <TextBtn
           handleClick={handleCheckMission2}
           className="check-btn"
