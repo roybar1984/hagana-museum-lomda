@@ -148,6 +148,7 @@ function Mission3(props) {
             setReadOnly={setReadOnly}
             isFinished={isFinished}
             Data={props.Data}
+            checkAns={true}
             // isInputClicked={isInputClicked}
             // setIsInputClicked={setIsInputClicked}
           />
@@ -167,6 +168,7 @@ function Mission3(props) {
             setReadOnly={setReadOnly}
             isFinished={isFinished}
             Data={props.Data}
+            checkAns={true}
             // isInputClicked={isInputClicked}
             // setIsInputClicked={setIsInputClicked}
           />
@@ -186,6 +188,7 @@ function Mission3(props) {
             setReadOnly={setReadOnly}
             isFinished={isFinished}
             Data={props.Data}
+            checkAns={true}
             // isInputClicked={isInputClicked}
             // setIsInputClicked={setIsInputClicked}
           />
@@ -205,6 +208,7 @@ function Mission3(props) {
             setReadOnly={setReadOnly}
             isFinished={isFinished}
             Data={props.Data}
+            checkAns={true}
             // isInputClicked={isInputClicked}
             // setIsInputClicked={setIsInputClicked}
           />
@@ -224,6 +228,7 @@ function Mission3(props) {
             setReadOnly={setReadOnly}
             isFinished={isFinished}
             Data={props.Data}
+            checkAns={true}
             // isInputClicked={isInputClicked}
             // setIsInputClicked={setIsInputClicked}
           />
@@ -243,6 +248,7 @@ function Mission3(props) {
             setReadOnly={setReadOnly}
             isFinished={isFinished}
             Data={props.Data}
+            checkAns={true}
             // isInputClicked={isInputClicked}
             // setIsInputClicked={setIsInputClicked}
           />
@@ -256,18 +262,25 @@ function Mission3(props) {
         )}
 
         {isFinished && (
-          <p className="answer-paragraph answer-paragrapgh-mission-3 fade-animation">
-            <Markup content={props.Data[6].answerText} />{" "}
-          </p>
+          <>
+            <p className="answer-paragraph answer-paragrapgh-mission-3 fade-animation">
+              <Markup content={props.Data[6].answerText} />{" "}
+            </p>
+            <NextBtn
+              fillClassName={"light-btn"}
+              textIndex={props.textIndex}
+              handleClickNext={handleMoveMission4}
+            />
+          </>
         )}
 
-        {isFinished && (
+        {/* {isFinished && (
           <NextBtn
             fillClassName={"light-btn"}
             textIndex={props.textIndex}
             handleClickNext={handleMoveMission4}
           />
-        )}
+        )} */}
       </div>
     </>
   );

@@ -7,8 +7,8 @@ function InputField(props) {
   return (
     <input
       className={`${props.className} ${
-        isCorrect && props.isFinished && "correct"
-      } ${!isCorrect && props.isFinished && "wrong"}`}
+        isCorrect && props.isFinished && props.checkAns && "correct"
+      } ${!isCorrect && props.isFinished && props.checkAns && "wrong"}`}
       // className={props.className}
       maxLength={props.maxLength}
       readOnly={props.readOnly}
@@ -21,44 +21,27 @@ function InputField(props) {
         let answer = event.target.value;
         if (answer !== "" && answer.trim() !== "") {
           props.setAnswer(answer.trim());
-          if (answer.trim() === props.Data[props.textIndex].answers[props.id]) {
-            setIsCorrect(true);
-            //   // if (parseInt(fieldIndex, 10) < numOfFields) {
-            //   //   // Get the next input field
-            //   //   const nextSibling = document.querySelector(
-            //   //     `input[name=ssn-${parseInt(fieldIndex, 10) + 1}]`
-            //   //   );
+          if (props.checkAns) {
+            if (
+              answer.trim() === props.Data[props.textIndex].answers[props.id]
+            ) {
+              setIsCorrect(true);
+              //   // if (parseInt(fieldIndex, 10) < numOfFields) {
+              //   //   // Get the next input field
+              //   //   const nextSibling = document.querySelector(
+              //   //     `input[name=ssn-${parseInt(fieldIndex, 10) + 1}]`
+              //   //   );
 
-            //   //   // If found, focus the next field
-            //   //   if (nextSibling !== null) {
-            //   //     nextSibling.focus();
-            //   //   }
-            // }
-          } else {
-            setIsCorrect(false);
+              //   //   // If found, focus the next field
+              //   //   if (nextSibling !== null) {
+              //   //     nextSibling.focus();
+              //   //   }
+              // }
+            } else {
+              setIsCorrect(false);
+            }
           }
         }
-
-        // setIsClicked(true);
-        // if (answer !== "" && answer.trim() !== "") {
-        //   if (props.isOneSubmitted) {
-        //     props.setIsBothSubmitted(true);
-        //   } else {
-        //     props.setIsOneSubmitted(true);
-        //   }
-
-        //   //   props.setIsBothSubmitted(true);
-        //   //   if (
-        //   //     answer === props.Data[props.textIndex].answers[0] ||
-        //   //     props.Data[props.textIndex].answers[1]
-        //   //   ) {
-        //   //     //   setIsCorrect(true);
-        //   //   } else {
-        //   //     //   setIsCorrect(false);
-        //   //   }
-        //   //   //   setIsClicked(false);
-        // }
-        // props.setanswer(answer);
       }}
     ></input>
   );

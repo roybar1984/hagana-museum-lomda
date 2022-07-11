@@ -5,7 +5,12 @@
 
 .mission4-instruction-paragrapgh {
   font-size: 8vw;
-  top: -18vh;
+  top: -20vh;
+}
+
+.mission4-question-paragrapgh {
+  top: -2vh;
+  font-size: 8vw;
 }
 
 .phone-number-text {
@@ -13,9 +18,42 @@
 }
 
 .phone-number {
-  top: -23vh;
+  top: -19vh;
+}
+
+.phone-number-for-question {
+  top: -35vh;
+  border: solid white 2px;
+  border-radius: 1em;
 }
 
 .continue-btn-mission4 {
   top: 63vh;
+}
+
+.input-mission4 {
+  width: 63;
+  position: relative;
+  top: -17vh;
+  color: white;
+  height: fit-content;
+  word-wrap: break-word;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-btn-mission4 {
+  position: absolute;
+  top: 60vh;
+  border: solid white;
+  color: white;
+}
+
+.answer-paragrapgh-mission-4 {
+  width: 85vw;
+  color: #b3faa0;
 }

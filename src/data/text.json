@@ -59,8 +59,8 @@
         "instruction": "חפשו מכשיר חוגה (טלפון) בתצוגת המוזיאון וחייגו את המספר הבא:",
         "btnText":"המשך",
         "phoneNumber":"<span class='bold-text phone-number-text'> 15051941 </span>",
-        "answers":["גולני", "גבעתי"],
-        "answerText":"<span class='bold-text larger-text'> התשובה הנכונה:</span> <br> החטיבות הן גולני וגבעתי"
+        "missionText":"חשבו על תאריך וענו כיצד קשור מספר זה לארגון ה״הגנה״ ולחדר ההיסטורי בו אתם נמצאים?",
+        "answerText":"<span class='bold-text larger-text'> התשובה הנכונה:</span> <br> יום ההחלטה על הקמת הפלמ״ח. ההחלטה התקבלה בחדר ההיסטורי בבית גולומב - המפקדה החשאית של ארגון ה״הגנה״."
         }
  
 ]
