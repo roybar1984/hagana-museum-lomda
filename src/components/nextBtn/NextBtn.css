@@ -2,19 +2,22 @@
   fill: #1b1464;
 }
 
+.light-btn {
+  fill: white;
+}
 
 .fade-animation {
-    animation: show 3s ease;
+  animation: show 3s ease;
 }
 
 @keyframes show {
-    0% {
-        opacity: 0;
-    }
-    100% {
-      opacity:1;
-    }
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
 
 /* .next-btn {
   position: absolute;

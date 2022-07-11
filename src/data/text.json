@@ -52,6 +52,15 @@
                      "לצבא", 
                      "סדיר"],
         "answerText":"<span class='bold-text larger-text'> התשובה הנכונה:</span> <br> ״עם הקמת מדינת ישראל, יצאה ההגנה ממחתרת והפכה לצבא סדיר "
+        },
+           {
+        "index": 7,
+        "title": "משימה 4",
+        "instruction": "חפשו מכשיר חוגה (טלפון) בתצוגת המוזיאון וחייגו את המספר הבא:",
+        "btnText":"המשך",
+        "phoneNumber":"<span class='bold-text phone-number-text'> 15051941 </span>",
+        "answers":["גולני", "גבעתי"],
+        "answerText":"<span class='bold-text larger-text'> התשובה הנכונה:</span> <br> החטיבות הן גולני וגבעתי"
         }
  
 ]

@@ -1,0 +1,21 @@
+.mission4-container {
+  /* top: -20vh; */
+  color: white;
+}
+
+.mission4-instruction-paragrapgh {
+  font-size: 8vw;
+  top: -18vh;
+}
+
+.phone-number-text {
+  font-size: 17vw;
+}
+
+.phone-number {
+  top: -23vh;
+}
+
+.continue-btn-mission4 {
+  top: 63vh;
+}

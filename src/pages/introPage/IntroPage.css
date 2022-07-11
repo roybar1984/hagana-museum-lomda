@@ -32,6 +32,7 @@
   top: 0vh;
   margin-bottom: 5vh;
   margin-top: 2vh;
+  border-top: solid;
   /* color: #1b1464; */
 }
 
@@ -50,9 +51,9 @@
 }
 
 .character-gif {
-  width: 54%;
+  width: 68%;
   position: relative;
-  top: 2vh;
+  top: 1vh;
 }
 
 .text {
@@ -64,7 +65,7 @@
   width: 80%;
   font-weight: 500;
   position: relative;
-  top: 2vh;
+  top: -3vh;
 }
 
 /*

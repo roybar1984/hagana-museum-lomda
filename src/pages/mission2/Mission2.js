@@ -17,7 +17,7 @@ function Mission2(props) {
 
   useEffect(() => {
     props.setTextIndex(5);
-
+    props.setBackgroundType("light-background");
     // setIsFinished(JSON.parse(window.localStorage.getItem("isFinished")));
   }, []);
 
@@ -51,9 +51,11 @@ function Mission2(props) {
           maxLength={5}
           answer={ans1}
           setAnswer={setAns1}
-          textIndex={props.textIndex}
+          textIndex={5}
           readOnly={readOnly}
           setReadOnly={setReadOnly}
+          id={0}
+          Data={props.Data}
           // isInputClicked={isInputClicked}
           // setIsInputClicked={setIsInputClicked}
         />
@@ -64,9 +66,11 @@ function Mission2(props) {
           maxLength={5}
           answer={ans2}
           setAnswer={setAns2}
-          textIndex={props.textIndex}
+          textIndex={5}
           readOnly={readOnly}
           setReadOnly={setReadOnly}
+          id={1}
+          Data={props.Data}
           // isInputClicked={isInputClicked}
           // setIsInputClicked={setIsInputClicked}
         />

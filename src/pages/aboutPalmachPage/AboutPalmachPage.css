@@ -2,10 +2,10 @@
   font-size: 9vw;
   width: 90%;
   text-align: right;
-  height: 52vh;
+  height: 63vh;
   position: relative;
   overflow-y: scroll;
-  top: -6vh;
+  top: -4vh;
   direction: ltr;
   margin-top: 2vh;
 }
@@ -41,7 +41,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  top: 7vh;
+  top: 0vh;
 }
 
 .start-mission-btn {
@@ -71,7 +71,7 @@
   position: absolute;
   right: 4vw;
   top: -1vh;
-  width: 41%;
+  width: 46%;
   transform: scaleX(-1);
   /* position: absolute;
   top: 72vh;

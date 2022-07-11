@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 function OpeningPage(props) {
   useEffect(() => {
     props.setTextIndex(0);
+    props.setBackgroundType("light-background");
   }, []);
   const navigate = useNavigate();
 

@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./AboutPalmachPage.css";
 import { Markup } from "interweave";
 import { useNavigate } from "react-router-dom";
-import eyeGif from "./../../media/gifs/Soldier not talking.gif";
+import eyeGif from "./../../media/gifs/Soldier-no talking-fixed.gif";
 import BackBtn from "../../components/backBtn/BackBtn";
 
 function AboutPalmachPage(props) {
   useEffect(() => {
     props.setTextIndex(3);
+    props.setBackgroundType("light-background");
   }, []);
 
   const navigate = useNavigate();

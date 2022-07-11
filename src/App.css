@@ -41,10 +41,17 @@ body {
 
   /* background: #a5eaf0b6; */
 }
+.light-background {
+  background-image: url(./media/openingBackground.png);
+}
 
-/* .middle-background {
-  
-} */
+.medium-background {
+  background-image: url(./media/medium-background.png);
+}
+
+.dark-background {
+  background-image: url(./media/dark.png);
+}
 
 .text {
   font-family: text-font;

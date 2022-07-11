@@ -8,16 +8,17 @@ import AboutPalmachPage from "./pages/aboutPalmachPage/AboutPalmachPage";
 import Mission1 from "./pages/mission1/Mission1";
 import Mission2 from "./pages/mission2/Mission2";
 import Mission3 from "./pages/mission3/Mission3";
-
+import Mission4 from "./pages/mission4/Mission4";
 function App() {
   const [textIndex, setTextIndex] = useState(1);
+  const [backgroundType, setBackgroundType] = useState("light-background ");
 
   useEffect(() => {
     setTextIndex(1);
   }, []);
 
   return (
-    <div className="App">
+    <div className={`App ${backgroundType}`}>
       <Router>
         <Routes>
           <Route
@@ -28,6 +29,7 @@ function App() {
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
+                setBackgroundType={setBackgroundType}
               />
             }
           ></Route>
@@ -39,6 +41,7 @@ function App() {
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
+                setBackgroundType={setBackgroundType}
               />
             }
           ></Route>
@@ -50,6 +53,7 @@ function App() {
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
+                setBackgroundType={setBackgroundType}
               />
             }
           ></Route>
@@ -61,6 +65,7 @@ function App() {
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
+                setBackgroundType={setBackgroundType}
               />
             }
           ></Route>
@@ -72,6 +77,7 @@ function App() {
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
+                setBackgroundType={setBackgroundType}
               />
             }
           ></Route>
@@ -83,6 +89,19 @@ function App() {
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
+                setBackgroundType={setBackgroundType}
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/mission4"
+            element={
+              <Mission4
+                Data={Data}
+                textIndex={textIndex}
+                setTextIndex={setTextIndex}
+                setBackgroundType={setBackgroundType}
               />
             }
           ></Route>

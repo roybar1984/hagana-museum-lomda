@@ -4,7 +4,7 @@ import "./IntroPage.css";
 import { gsap } from "gsap";
 // import Character from "../../components/speechBubble/character/Character";
 import { Markup } from "interweave";
-import gif from "../../media/gifs/Soldier-talking.gif";
+import gif from "../../media/gifs/Soldier-talking-fixed.gif";
 import NextBtn from "../../components/nextBtn/NextBtn";
 // import CharacterCircle from "../../components/characterCircle/CharacterCircle";
 // import AnimatedPage from "../../components/AnimatedPage";
@@ -34,6 +34,7 @@ function IntroPage(props) {
 
   useEffect(() => {
     props.setTextIndex(1);
+    props.setBackgroundType("light-background");
   }, []);
 
   const handleClickNext = (event) => {

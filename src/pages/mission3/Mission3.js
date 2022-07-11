@@ -5,8 +5,10 @@ import { Markup } from "interweave";
 import InputField from "../../components/inputField/InputField";
 import TextBtn from "../../components/textBtn/TextBtn";
 import NextBtn from "../../components/nextBtn/NextBtn";
+import { useNavigate } from "react-router-dom";
 
 function Mission3(props) {
+  const navigate = useNavigate();
   const [readOnly, setReadOnly] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
   const [isAllFull, setIsAllFull] = useState(false);
@@ -40,6 +42,7 @@ function Mission3(props) {
 
   useEffect(() => {
     props.setTextIndex(6);
+    props.setBackgroundType("medium-background");
   }, []);
 
   //   useEffect(() => {
@@ -110,8 +113,12 @@ function Mission3(props) {
     // //  inputRef.current.blur();
   };
 
+  const handleMoveMission4 = (event) => {
+    navigate("/mission4");
+  };
+
   return (
-    <div>
+    <>
       <div className="mission-container mission3-container">
         <BackBtn
           textIndex={props.textIndex}
@@ -256,12 +263,13 @@ function Mission3(props) {
 
         {isFinished && (
           <NextBtn
+            fillClassName={"light-btn"}
             textIndex={props.textIndex}
-            // handleClickNext={handleMoveMission3}
+            handleClickNext={handleMoveMission4}
           />
         )}
       </div>
-    </div>
+    </>
   );
 }
 

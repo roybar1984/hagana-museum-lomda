@@ -37,6 +37,7 @@ function Mission1(props) {
   useEffect(() => {
     props.setTextIndex(4);
     setIsInfoShowed(true);
+    props.setBackgroundType("light-background");
     // setIsInfoShowed(JSON.parse(window.localStorage.getItem("isInfoShowed")));
 
     // return () => {
