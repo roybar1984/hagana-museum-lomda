@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #1b1464;
 }
 
 .next-btn {
@@ -31,7 +32,7 @@
   top: 0vh;
   margin-bottom: 5vh;
   margin-top: 2vh;
-  color: #1b1464;
+  /* color: #1b1464; */
 }
 
 .start-mission-btn {

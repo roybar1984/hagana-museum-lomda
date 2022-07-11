@@ -1,0 +1,50 @@
+.mission3-instruction-paragrapgh {
+  top: -11vh;
+}
+
+.mission3-container {
+  color: white;
+  height: 62vh;
+}
+
+.input-mission3 {
+  width: 20vw;
+  color: white;
+}
+
+/* .input-mission3 ::placeholder {
+  font-size: 1px;
+} */
+
+.input-fields-container-mission3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 88vw;
+  height: 20vh;
+  position: relative;
+  top: -12vh;
+}
+
+.answer-paragrapgh-mission-3 {
+  width: 70vw;
+  top: 58vh;
+  font-size: 7vw;
+}
+
+.correct {
+  background-color: #64cc48b3;
+}
+
+.wrong {
+  background-color: #eb5258bd;
+}
+
+/* .check-btn-mission3 {
+  position: relative;
+  top: 5vh;
+  border: solid white 1.2vw;
+  color: white;
+} */

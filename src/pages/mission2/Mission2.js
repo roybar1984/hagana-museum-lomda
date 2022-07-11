@@ -13,7 +13,7 @@ function Mission2(props) {
   const [ans1, setAns1] = useState("");
   const [ans2, setAns2] = useState("");
   const [readOnly, setReadOnly] = useState(false);
-  const [isInputClicked, setIsInputClicked] = useState(false);
+  // const [isInputClicked, setIsInputClicked] = useState(false);
 
   useEffect(() => {
     props.setTextIndex(5);
@@ -54,8 +54,8 @@ function Mission2(props) {
           textIndex={props.textIndex}
           readOnly={readOnly}
           setReadOnly={setReadOnly}
-          isInputClicked={isInputClicked}
-          setIsInputClicked={setIsInputClicked}
+          // isInputClicked={isInputClicked}
+          // setIsInputClicked={setIsInputClicked}
         />
         <InputField
           className="input-mission2"
@@ -67,8 +67,8 @@ function Mission2(props) {
           textIndex={props.textIndex}
           readOnly={readOnly}
           setReadOnly={setReadOnly}
-          isInputClicked={isInputClicked}
-          setIsInputClicked={setIsInputClicked}
+          // isInputClicked={isInputClicked}
+          // setIsInputClicked={setIsInputClicked}
         />
       </div>
 

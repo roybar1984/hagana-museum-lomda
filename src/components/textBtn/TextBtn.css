@@ -2,3 +2,10 @@
   position: absolute;
   top: 60vh;
 }
+
+.check-btn-mission3 {
+  position: absolute;
+  top: 65vh;
+  border: solid white 1.2vw;
+  color: white;
+}

@@ -7,7 +7,7 @@ function TextBtn(props) {
     <button
       onClick={props.handleClick}
       //   ref={openingBtn}
-      className={`btns start-lomda-btn ${props.className} `}
+      className={`btns start-lomda-btn ${props.className}`}
     >
       {props.btnText}
       {/* <Markup content={props.Data[props.textIndex].btnText} /> */}

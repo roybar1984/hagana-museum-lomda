@@ -7,7 +7,7 @@ import "./App.css";
 import AboutPalmachPage from "./pages/aboutPalmachPage/AboutPalmachPage";
 import Mission1 from "./pages/mission1/Mission1";
 import Mission2 from "./pages/mission2/Mission2";
-
+import Mission3 from "./pages/mission3/Mission3";
 
 function App() {
   const [textIndex, setTextIndex] = useState(1);
@@ -69,6 +69,17 @@ function App() {
             path="/mission2"
             element={
               <Mission2
+                Data={Data}
+                textIndex={textIndex}
+                setTextIndex={setTextIndex}
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/mission3"
+            element={
+              <Mission3
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
