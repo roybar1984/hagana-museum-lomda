@@ -19,21 +19,30 @@
 
 .mission5-instruction-paragrapgh {
   margin-bottom: 1vh;
+  font-size: 7vw;
+}
+
+.input-mission5 {
+  color: white;
 }
 
 .input-mission5::-webkit-input-placeholder {
-  font-size: 7vw;
-  color: white;
+  font-size: 6vw;
+  color: rgba(250, 247, 247, 0.728);
 }
 .input-mission5::-moz-placeholder {
-  font-size: 7vw;
-  color: white;
+  font-size: 6vw;
+  color: rgba(250, 247, 247, 0.728);
 }
 .input-mission5:-ms-input-placeholder {
-  font-size: 7vw;
-  color: white;
+  font-size: 6vw;
+  color: rgba(250, 247, 247, 0.728);
 }
 .input-mission5::placeholder {
   font-size: 7vw;
-  color: white;
+  color: rgba(250, 247, 247, 0.728);
+}
+
+.check-btn-mission5 {
+  top: 79vh;
 }

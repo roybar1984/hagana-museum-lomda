@@ -14,7 +14,7 @@ function Mission5(props) {
 
   useEffect(() => {
     props.setTextIndex(8);
-    props.setBackgroundType("medium-background");
+    props.setBackgroundType("dark-background");
   }, []);
 
   const handleMoveMission5 = (event) => {
@@ -31,7 +31,7 @@ function Mission5(props) {
         <h1 className="mission-title">
           <Markup content={props.Data[8].title} />
         </h1>
-        <p className="mission-instruction-paragraph mission4-instruction-paragrapgh">
+        <p className="mission-instruction-paragraph mission5-intro-instruction-paragrapgh">
           <Markup content={props.Data[8].instruction} />
         </p>
         <PalmachIcon setIsClicked={setIsClicked} isClicked={isClicked} />
