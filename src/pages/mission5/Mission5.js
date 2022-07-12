@@ -17,7 +17,75 @@ function Mission5(props) {
     props.setBackgroundType("dark-background");
   }, []);
 
-  return <div>Mission5</div>;
+  return (
+    <>
+      <div className="mission-container mission3-container">
+        <BackBtn
+          textIndex={props.textIndex}
+          setTextIndex={props.setTextIndex}
+        />
+        <h1 className="mission-title">
+          <Markup content={props.Data[8].title} />
+        </h1>
+        <div className="questions-container-mission5">
+          <div className="question-container-mission5">
+            <p className="mission-instruction-paragraph mission5-instruction-paragrapgh">
+              <Markup content={props.Data[8].questions[0]} />
+            </p>
+            <InputField
+              className="input-mission2 input-mission5"
+              placeholder="הקלידו כאן"
+              type="text"
+              // maxLength={5}
+              // answer={ans1}
+              // setAnswer={setAns1}
+              textIndex={8}
+              readOnly={readOnly}
+              setReadOnly={setReadOnly}
+              id={0}
+              Data={props.Data}
+            />
+          </div>
+          <div className="question-container-mission5">
+            <p className="mission-instruction-paragraph mission5-instruction-paragrapgh">
+              <Markup content={props.Data[8].questions[1]} />
+            </p>
+            <InputField
+              className="input-mission2 input-mission5"
+              placeholder="הקלידו כאן"
+              type="text"
+              // maxLength={5}
+              // answer={ans1}
+              // setAnswer={setAns1}
+              textIndex={8}
+              readOnly={readOnly}
+              setReadOnly={setReadOnly}
+              id={1}
+              Data={props.Data}
+            />
+          </div>
+          <div className="question-container-mission5">
+            <p className="mission-instruction-paragraph mission5-instruction-paragrapgh">
+              <Markup content={props.Data[8].questions[2]} />
+            </p>
+            <InputField
+              className="input-mission2 input-mission5"
+              placeholder="הקלידו כאן"
+              type="text"
+              // maxLength={5}
+              // answer={ans1}
+              // setAnswer={setAns1}
+              textIndex={8}
+              readOnly={readOnly}
+              setReadOnly={setReadOnly}
+              id={2}
+              Data={props.Data}
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Mission5;
