@@ -29,8 +29,8 @@ function Mission4(props) {
     setReadOnly(true);
   };
 
-  const handleMoveMission5 = (event) => {
-    navigate("/mission5");
+  const handleMoveIntroMission5 = (event) => {
+    navigate("/introMission5");
   };
 
   return (
@@ -112,7 +112,7 @@ function Mission4(props) {
                 <NextBtn
                   fillClassName={"light-btn"}
                   textIndex={props.textIndex}
-                  handleClickNext={handleMoveMission5}
+                  handleClickNext={handleMoveIntroMission5}
                 />
               </>
             )}
