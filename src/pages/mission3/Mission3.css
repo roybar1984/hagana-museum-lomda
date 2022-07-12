@@ -11,6 +11,18 @@
   width: 20vw;
   color: white;
 }
+::-webkit-input-placeholder {
+  font-size: 20px;
+}
+::-moz-placeholder {
+  font-size: 20px;
+}
+:-ms-input-placeholder {
+  font-size: 20px;
+}
+::placeholder {
+  font-size: 20px;
+}
 
 /* .input-mission3 ::placeholder {
   font-size: 1px;

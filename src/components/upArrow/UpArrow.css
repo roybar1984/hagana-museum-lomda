@@ -1,0 +1,28 @@
+.arrow-color {
+  fill: #fff;
+}
+
+.up-arrow {
+  width: 8vw;
+  position: relative;
+  top: -3vh;
+  /* animation: move-up-down 2s infinite; */
+}
+
+@keyframes move-up-down {
+  0% {
+    top: -3vh;
+  }
+  25% {
+    top: -1vh;
+  }
+  50% {
+    top: 0vh;
+  }
+  75% {
+    top: -1vh;
+  }
+  100% {
+    top: -3vh;
+  }
+}

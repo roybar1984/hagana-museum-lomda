@@ -134,7 +134,7 @@ function Mission3(props) {
         <div className="input-fields-container-mission3">
           <InputField
             className="input-mission2 input-mission3"
-            placeholder="..."
+            placeholder="הקלידו כאן"
             type="text"
             maxLength={6}
             // value={answers[0]}
@@ -149,12 +149,10 @@ function Mission3(props) {
             isFinished={isFinished}
             Data={props.Data}
             checkAns={true}
-            // isInputClicked={isInputClicked}
-            // setIsInputClicked={setIsInputClicked}
           />
           <InputField
             className="input-mission2 input-mission3"
-            placeholder="..."
+            placeholder="הקלידו כאן"
             type="text"
             maxLength={6}
             // value={answers[1]}
@@ -169,12 +167,10 @@ function Mission3(props) {
             isFinished={isFinished}
             Data={props.Data}
             checkAns={true}
-            // isInputClicked={isInputClicked}
-            // setIsInputClicked={setIsInputClicked}
           />
           <InputField
             className="input-mission2 input-mission3"
-            placeholder="..."
+            placeholder="הקלידו כאן"
             type="text"
             maxLength={6}
             // value={answers[2]}
@@ -189,12 +185,10 @@ function Mission3(props) {
             isFinished={isFinished}
             Data={props.Data}
             checkAns={true}
-            // isInputClicked={isInputClicked}
-            // setIsInputClicked={setIsInputClicked}
           />
           <InputField
             className="input-mission2 input-mission3"
-            placeholder="..."
+            placeholder="הקלידו כאן"
             type="text"
             maxLength={6}
             // value={answers[3]}
@@ -209,12 +203,10 @@ function Mission3(props) {
             isFinished={isFinished}
             Data={props.Data}
             checkAns={true}
-            // isInputClicked={isInputClicked}
-            // setIsInputClicked={setIsInputClicked}
           />
           <InputField
             className="input-mission2 input-mission3"
-            placeholder="..."
+            placeholder="הקלידו כאן"
             type="text"
             maxLength={6}
             // value={answers[4]}
@@ -229,12 +221,10 @@ function Mission3(props) {
             isFinished={isFinished}
             Data={props.Data}
             checkAns={true}
-            // isInputClicked={isInputClicked}
-            // setIsInputClicked={setIsInputClicked}
           />
           <InputField
             className="input-mission2 input-mission3"
-            placeholder="..."
+            placeholder="הקלידו כאן"
             type="text"
             maxLength={6}
             // value={answers[5]}
@@ -249,8 +239,6 @@ function Mission3(props) {
             isFinished={isFinished}
             Data={props.Data}
             checkAns={true}
-            // isInputClicked={isInputClicked}
-            // setIsInputClicked={setIsInputClicked}
           />
         </div>
         {ans0 && ans1 && ans2 && ans3 && ans4 && ans5 && !isFinished && (

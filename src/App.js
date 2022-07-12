@@ -9,6 +9,7 @@ import Mission1 from "./pages/mission1/Mission1";
 import Mission2 from "./pages/mission2/Mission2";
 import Mission3 from "./pages/mission3/Mission3";
 import Mission4 from "./pages/mission4/Mission4";
+import Mission5 from "./pages/mission5/Mission5";
 function App() {
   const [textIndex, setTextIndex] = useState(1);
   const [backgroundType, setBackgroundType] = useState("light-background ");
@@ -98,6 +99,18 @@ function App() {
             path="/mission4"
             element={
               <Mission4
+                Data={Data}
+                textIndex={textIndex}
+                setTextIndex={setTextIndex}
+                setBackgroundType={setBackgroundType}
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/mission5"
+            element={
+              <Mission5
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}

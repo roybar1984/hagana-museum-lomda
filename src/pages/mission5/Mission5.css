@@ -1,0 +1,17 @@
+.mission4-instruction-paragrapgh {
+  top: -24vh;
+}
+.btn-arrow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 80vh;
+}
+
+.move-to-palmach-website-btn {
+  font-family: bold-text;
+  position: relative;
+  top: -2vh;
+}
