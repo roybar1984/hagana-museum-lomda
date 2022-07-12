@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./InputField.css";
 
 function InputField(props) {
-  // console.log(props.Data[props.textIndex].answers[props.id]);
   const [isCorrect, setIsCorrect] = useState("");
   // console.log(props.checkAns);
   return (

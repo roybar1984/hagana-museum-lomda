@@ -54,6 +54,7 @@ function Mission5(props) {
               checkAns={true}
               answer={ans0}
               setAnswer={setAns0}
+              isFinished={isFinished}
             />
           </div>
           <div className="question-container-mission5">
@@ -75,6 +76,7 @@ function Mission5(props) {
               checkAns={true}
               answer={ans1}
               setAnswer={setAns1}
+              isFinished={isFinished}
             />
           </div>
           <div className="question-container-mission5">
@@ -96,6 +98,7 @@ function Mission5(props) {
               checkAns={true}
               answer={ans2}
               setAnswer={setAns2}
+              isFinished={isFinished}
             />
           </div>
         </div>
