@@ -7,11 +7,19 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 80vh;
+  top: 77vh;
 }
 
 .move-to-palmach-website-btn {
   font-family: bold-text;
   position: relative;
-  top: -2vh;
+  top: -3vh;
+  border: none;
+  font-size: 8vw;
+}
+
+.dont-forget-paragrapgh {
+  position: absolute;
+  top: 4vh;
+  color: #b3faa0;
 }

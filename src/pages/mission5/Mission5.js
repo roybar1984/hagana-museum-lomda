@@ -9,6 +9,7 @@ import PalmachIcon from "../../components/palmachIcon/PalmachIcon";
 import UpArrow from "../../components/upArrow/UpArrow";
 
 function Mission5(props) {
+  const [isClicked, setIsClicked] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     props.setTextIndex(8);
@@ -28,14 +29,20 @@ function Mission5(props) {
         <p className="mission-instruction-paragraph mission4-instruction-paragrapgh">
           <Markup content={props.Data[8].instruction} />
         </p>
-        <PalmachIcon />
+        <PalmachIcon setIsClicked={setIsClicked} isClicked={isClicked} />
         <div className="btn-arrow-container">
           <UpArrow />
           <TextBtn
             className="check-btn-mission3 move-to-palmach-website-btn"
             btnText={props.Data[8].btnText}
           />
+          {!isClicked && (
+            <p className="mission-instruction-paragraph dont-forget-paragrapgh fade-animation">
+              אבל אל תשכחו לחזור
+            </p>
+          )}
         </div>
+        {isClicked && <NextBtn fillClassName={"light-btn"} />}
       </div>
     </>
   );
