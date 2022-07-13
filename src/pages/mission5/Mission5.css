@@ -5,7 +5,7 @@
   align-items: center;
   height: 70vh;
   position: relative;
-  top: -8vh;
+  top: -3vh;
 }
 
 .question-container-mission5 {
@@ -45,4 +45,14 @@
 
 .check-btn-mission5 {
   top: 79vh;
+}
+
+.answer-paragrapgh-mission-5 {
+  position: relative;
+  top: -3vh;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
 }

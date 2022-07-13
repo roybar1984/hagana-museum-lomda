@@ -11,6 +11,8 @@ import Mission3 from "./pages/mission3/Mission3";
 import Mission4 from "./pages/mission4/Mission4";
 import IntroMission5 from "./pages/introMission5/IntroMission5";
 import Mission5 from "./pages/mission5/Mission5";
+import EndPage from "./pages/endPage/EndPage";
+import AboutPage from "./pages/aboutPage/AboutPage";
 
 function App() {
   const [textIndex, setTextIndex] = useState(1);
@@ -45,18 +47,20 @@ function App() {
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
                 setBackgroundType={setBackgroundType}
+                backgroundType={"light-background"}
               />
             }
           ></Route>
           <Route
             exact
-            path="/aboutPalmach"
+            path="/aboutHagana"
             element={
               <AboutPalmachPage
                 Data={Data}
-                textIndex={textIndex}
+                textIndex={3}
                 setTextIndex={setTextIndex}
                 setBackgroundType={setBackgroundType}
+                backgroundType={"light-background"}
               />
             }
           ></Route>
@@ -129,6 +133,43 @@ function App() {
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
                 setBackgroundType={setBackgroundType}
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/aboutPalmach"
+            element={
+              <AboutPalmachPage
+                Data={Data}
+                textIndex={9}
+                setTextIndex={setTextIndex}
+                setBackgroundType={setBackgroundType}
+                backgroundType={"dark-background"}
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/endPage"
+            element={
+              <EndPage
+                Data={Data}
+                textIndex={10}
+                setTextIndex={setTextIndex}
+                setBackgroundType={setBackgroundType}
+                backgroundType={"dark-background"}
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/aboutPage"
+            element={
+              <AboutPage
+                Data={Data}
+                setBackgroundType={setBackgroundType}
+                backgroundType={"dark-background"}
               />
             }
           ></Route>

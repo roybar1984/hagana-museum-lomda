@@ -4,11 +4,12 @@ import { Markup } from "interweave";
 import { useNavigate } from "react-router-dom";
 import eyeGif from "./../../media/gifs/Soldier-no talking-fixed.gif";
 import BackBtn from "../../components/backBtn/BackBtn";
+import NextBtn from "./../../components/nextBtn/NextBtn";
 
 function AboutPalmachPage(props) {
   useEffect(() => {
-    props.setTextIndex(3);
-    props.setBackgroundType("light-background");
+    props.setTextIndex(props.textIndex);
+    props.setBackgroundType(props.backgroundType);
   }, []);
 
   const navigate = useNavigate();
@@ -28,16 +29,23 @@ function AboutPalmachPage(props) {
     // navigate(1);
   };
 
+  const handleClickEndLomda = (event) => {
+    navigate("/endPage");
+  };
+
   return (
     <div className="bubble-container">
       <BackBtn textIndex={props.textIndex} setTextIndex={props.setTextIndex} />
-      <h1 className="mission-title">
-        <Markup content={props.Data[3].title} />
+      <h1 className={`mission-title ${props.textIndex === 9 && "light-text"}`}>
+        <Markup content={props.Data[props.textIndex].title} />
       </h1>
       <div onScroll={handleScroll} className="scroll-text-container text">
-        <div className="scroll-text">
-          {" "}
-          <Markup content={props.Data[3].text} />
+        <div
+          className={`scroll-text ${
+            props.textIndex === 9 && "light-text scroll-text-smaller"
+          }`}
+        >
+          <Markup content={props.Data[props.textIndex].text} />
         </div>
       </div>
       <div className="chracter-btn-container">
@@ -46,13 +54,21 @@ function AboutPalmachPage(props) {
           src={eyeGif}
           alt="loading..."
         />
-        {isFinishedScrolling && (
+        {isFinishedScrolling && props.textIndex === 3 && (
           <button
             onClick={handleClickMission1}
-            className="btns start-lomda-btn start-mission-btn fade-animation"
+            className={`btns start-lomda-btn start-mission-btn fade-animation $`}
           >
             למשימה
           </button>
+        )}
+
+        {isFinishedScrolling && props.textIndex === 9 && (
+          <NextBtn
+            handleClickNext={handleClickEndLomda}
+            className="next-btn-scroll-page"
+            fillClassName={"light-btn"}
+          />
         )}
       </div>
     </div>

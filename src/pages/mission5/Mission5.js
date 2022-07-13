@@ -24,6 +24,11 @@ function Mission5(props) {
     setIsFinished(true);
     setReadOnly(true);
   };
+
+  const handleMovePalmachScroll = (event) => {
+    navigate("/aboutPalmach");
+  };
+
   return (
     <>
       <div className="mission-container mission3-container">
@@ -56,6 +61,14 @@ function Mission5(props) {
               setAnswer={setAns0}
               isFinished={isFinished}
             />
+
+            <p
+              className={`answer-paragraph answer-paragrapgh-mission-5 fade-animation ${
+                isFinished && "visible"
+              }`}
+            >
+              <Markup content={props.Data[8].answers[0]} />
+            </p>
           </div>
           <div className="question-container-mission5">
             <p className="mission-instruction-paragraph mission5-instruction-paragrapgh">
@@ -78,6 +91,13 @@ function Mission5(props) {
               setAnswer={setAns1}
               isFinished={isFinished}
             />
+            <p
+              className={`answer-paragraph answer-paragrapgh-mission-5 fade-animation ${
+                isFinished && "visible"
+              }`}
+            >
+              <Markup content={props.Data[8].answers[1]} />
+            </p>
           </div>
           <div className="question-container-mission5">
             <p className="mission-instruction-paragraph mission5-instruction-paragrapgh">
@@ -100,6 +120,13 @@ function Mission5(props) {
               setAnswer={setAns2}
               isFinished={isFinished}
             />
+            <p
+              className={`answer-paragraph answer-paragrapgh-mission-5 fade-animation ${
+                isFinished && "visible"
+              }`}
+            >
+              <Markup content={props.Data[8].answers[2]} />
+            </p>
           </div>
         </div>
         {ans0 && ans1 && ans2 && !isFinished && (
@@ -107,6 +134,13 @@ function Mission5(props) {
             handleClick={handleCheckMission5}
             className="check-btn-mission3 check-btn-mission5"
             btnText="בדיקה"
+          />
+        )}
+        {isFinished && (
+          <NextBtn
+            fillClassName={"light-btn"}
+            textIndex={8}
+            handleClickNext={handleMovePalmachScroll}
           />
         )}
       </div>

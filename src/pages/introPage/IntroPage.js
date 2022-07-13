@@ -39,7 +39,7 @@ function IntroPage(props) {
 
   const handleClickNext = (event) => {
     if (props.textIndex === 2) {
-      navigate("/aboutPalmach");
+      navigate("/aboutHagana");
       props.setTextIndex(props.textIndex + 1);
     }
     props.setTextIndex(props.textIndex + 1);

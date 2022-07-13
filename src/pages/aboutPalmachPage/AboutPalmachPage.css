@@ -29,6 +29,8 @@
 .scroll-text {
   direction: rtl;
   margin-right: 4vw;
+  font-weight: 500;
+  font-family: text-font;
   /* padding-bottom: 0.3vh; */
   /* padding-top: 0.3vh; */
 }
@@ -76,4 +78,17 @@
   /* position: absolute;
   top: 72vh;
   right: 2vw; */
+}
+
+.light-text {
+  color: white;
+}
+
+.next-btn-scroll-page {
+  bottom: -10vw;
+  right: 76vw;
+}
+
+.scroll-text-smaller {
+  font-size: 8vw;
 }

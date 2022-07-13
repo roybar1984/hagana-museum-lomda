@@ -1,0 +1,17 @@
+.end-text {
+  color: white;
+}
+
+.end-container {
+  position: relative;
+  top: -8vh;
+}
+
+.end-text {
+  font-family: text-font;
+  font-weight: 700;
+}
+
+.to-about-page-btn {
+  top: 76vh;
+}
