@@ -89,6 +89,10 @@
   right: 76vw;
 }
 
+.scroll-text-container-dark {
+  width: 82%;
+}
+
 .scroll-text-smaller {
   font-size: 8vw;
 }

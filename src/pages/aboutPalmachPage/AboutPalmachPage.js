@@ -39,7 +39,10 @@ function AboutPalmachPage(props) {
       <h1 className={`mission-title ${props.textIndex === 9 && "light-text"}`}>
         <Markup content={props.Data[props.textIndex].title} />
       </h1>
-      <div onScroll={handleScroll} className="scroll-text-container text">
+      <div
+        onScroll={handleScroll}
+        className="scroll-text-container text scroll-text-container-dark"
+      >
         <div
           className={`scroll-text ${
             props.textIndex === 9 && "light-text scroll-text-smaller"
