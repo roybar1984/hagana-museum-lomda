@@ -4,8 +4,8 @@
   justify-content: space-between;
   align-items: center;
   height: 70vh;
-  position: relative;
-  top: -3vh;
+  position: absolute;
+  top: 18vh;
 }
 
 .question-container-mission5 {
@@ -44,12 +44,12 @@
 }
 
 .check-btn-mission5 {
-  top: 68vh;
+  top: 74vh;
 }
 
 .answer-paragrapgh-mission-5 {
   position: relative;
-  top: -3vh;
+  top: -8vh;
   visibility: hidden;
 }
 

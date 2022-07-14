@@ -69,7 +69,7 @@ function Mission4(props) {
             <PhoneIcon />
             <TextBtn
               handleClick={handleShowMission4}
-              className="check-btn-mission3 continue-btn-mission4"
+              className="check-btn check-btn-mission3 continue-btn-mission4"
               btnText={props.Data[7].btnText}
             />
           </>

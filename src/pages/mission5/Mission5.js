@@ -63,9 +63,8 @@ function Mission5(props) {
             />
 
             <p
-              className={`answer-paragraph answer-paragrapgh-mission-5 fade-animation ${
-                isFinished && "visible"
-              }`}
+              className={`answer-paragraph answer-paragrapgh-mission-5 fade-animation ${isFinished &&
+                "visible"}`}
             >
               <Markup content={props.Data[8].answers[0]} />
             </p>
@@ -92,9 +91,8 @@ function Mission5(props) {
               isFinished={isFinished}
             />
             <p
-              className={`answer-paragraph answer-paragrapgh-mission-5 fade-animation ${
-                isFinished && "visible"
-              }`}
+              className={`answer-paragraph answer-paragrapgh-mission-5 fade-animation ${isFinished &&
+                "visible"}`}
             >
               <Markup content={props.Data[8].answers[1]} />
             </p>
@@ -121,9 +119,8 @@ function Mission5(props) {
               isFinished={isFinished}
             />
             <p
-              className={`answer-paragraph answer-paragrapgh-mission-5 fade-animation ${
-                isFinished && "visible"
-              }`}
+              className={`answer-paragraph answer-paragrapgh-mission-5 fade-animation ${isFinished &&
+                "visible"}`}
             >
               <Markup content={props.Data[8].answers[2]} />
             </p>
@@ -132,7 +129,7 @@ function Mission5(props) {
         {ans0 && ans1 && ans2 && !isFinished && (
           <TextBtn
             handleClick={handleCheckMission5}
-            className="check-btn-mission3 check-btn-mission5"
+            className="check-btn check-btn-mission3 check-btn-mission5"
             btnText="בדיקה"
           />
         )}
