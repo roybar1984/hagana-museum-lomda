@@ -9,7 +9,7 @@
 }
 
 .mission4-question-paragrapgh {
-  top: -2vh;
+  top: 5vh;
   font-size: 8vw;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .phone-number-for-question {
-  top: -35vh;
+  top: -27vh;
   border: solid white 2px;
   border-radius: 1em;
 }
@@ -34,7 +34,7 @@
 .input-mission4 {
   width: 63;
   position: relative;
-  top: -17vh;
+  top: -14vh;
   /* color: rgba(250, 247, 247, 0.927); */
   color: #1b1464;
   height: fit-content;
@@ -63,4 +63,6 @@
 .answer-paragrapgh-mission-4 {
   width: 85vw;
   color: #b3faa0;
+  font-size: 7vw;
+  top: 58vh;
 }

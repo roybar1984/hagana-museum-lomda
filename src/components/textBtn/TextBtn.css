@@ -1,12 +1,13 @@
 .check-btn {
   position: absolute;
-
-  top: 51vh;
+  top: 54vh;
+  padding: 0.6em;
+  height: 6vh;
 }
 
 .check-btn-mission3 {
   position: absolute;
-  top: 55vh;
+  top: 61vh;
   border: solid white 1.2vw;
   color: white;
 }
