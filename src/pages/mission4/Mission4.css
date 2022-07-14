@@ -58,7 +58,7 @@
 
 .check-btn-mission4 {
   position: absolute;
-  top: 64vh;
+  top: 67vh;
   border: solid white;
   color: white;
 }
@@ -66,6 +66,6 @@
 .answer-paragrapgh-mission-4 {
   width: 82vw;
   color: #b3faa0;
-  font-size: 6vw;
-  top: 62vh;
+  font-size: 5.5vw;
+  top: 60vh;
 }
