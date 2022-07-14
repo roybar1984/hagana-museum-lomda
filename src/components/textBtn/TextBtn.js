@@ -1,6 +1,5 @@
 import React from "react";
 import "./TextBtn.css";
-import { Markup } from "interweave";
 
 function TextBtn(props) {
   return (

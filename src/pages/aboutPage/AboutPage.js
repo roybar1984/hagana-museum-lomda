@@ -1,13 +1,11 @@
 import "./AboutPage.css";
-import React, { useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
 
 function AboutPage(props) {
   useEffect(() => {
     props.setBackgroundType("dark-background");
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const navigate = useNavigate();
   return (
     <div className="bubble-container">
       <h1 className="mission-title about-title">אודות</h1>

@@ -19,7 +19,7 @@ function Mission2(props) {
     props.setTextIndex(5);
     props.setBackgroundType("light-background");
     // setIsFinished(JSON.parse(window.localStorage.getItem("isFinished")));
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleCheckMission2 = (event) => {
     setIsFinished(true);
@@ -30,8 +30,6 @@ function Mission2(props) {
   const handleMoveMission3 = (event) => {
     navigate("/mission3");
   };
-
-  const handleChangeAnswer = (event) => {};
 
   return (
     <div className="mission-container mission2-container">

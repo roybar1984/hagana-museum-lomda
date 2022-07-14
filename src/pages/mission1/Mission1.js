@@ -2,12 +2,11 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import "./Mission1.css";
 import { Markup } from "interweave";
-import TextBtn from "./../../components/textBtn/TextBtn";
 import InfoIcon from "../../components/infoIcon/InfoIcon";
 import BackBtn from "../../components/backBtn/BackBtn";
 import NextBtn from "../../components/nextBtn/NextBtn";
 import { useNavigate } from "react-router-dom";
-import InputField from "../../components/inputField/InputField";
+// import InputField from "../../components/inputField/InputField";
 
 function Mission1(props) {
   const navigate = useNavigate();
@@ -16,9 +15,9 @@ function Mission1(props) {
   const [isInfoShowed, setIsInfoShowed] = useState(true);
   const [isCorrect, setIsCorrect] = useState();
   const [isClicked, setIsClicked] = useState(false);
-  const [isMissionDone, setIsMissionDone] = useState(false);
+  // const [isMissionDone, setIsMissionDone] = useState(false);
   const [readOnly, setReadOnly] = useState(false);
-  const [correctAns, setCorrectAns] = useState(12);
+  // const [correctAns, setCorrectAns] = useState(12);
 
   // useEffect(() => {
   //   props.setTextIndex(5);
@@ -43,7 +42,7 @@ function Mission1(props) {
     // return () => {
     //   setIsInfoShowed(false);
     // };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // useEffect(() => {
   //   if (isMissionDone === true) {
@@ -75,7 +74,7 @@ function Mission1(props) {
   };
 
   const handleMoveMission2 = (event) => {
-    setIsMissionDone(true);
+    // setIsMissionDone(true);
     navigate("/mission2");
   };
   return (

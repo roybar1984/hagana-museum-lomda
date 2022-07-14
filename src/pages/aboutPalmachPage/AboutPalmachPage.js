@@ -10,7 +10,7 @@ function AboutPalmachPage(props) {
   useEffect(() => {
     props.setTextIndex(props.textIndex);
     props.setBackgroundType(props.backgroundType);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const navigate = useNavigate();
   const [isFinishedScrolling, setIsFinishedScrolling] = useState(false);

@@ -15,7 +15,7 @@ function Mission5(props) {
   useEffect(() => {
     props.setTextIndex(8);
     props.setBackgroundType("dark-background");
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleMoveMission5 = (event) => {
     navigate("/mission5");

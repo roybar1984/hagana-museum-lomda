@@ -18,7 +18,7 @@ function Mission5(props) {
   useEffect(() => {
     props.setTextIndex(8);
     props.setBackgroundType("dark-background");
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleCheckMission5 = (event) => {
     setIsFinished(true);

@@ -35,7 +35,8 @@
   width: 63;
   position: relative;
   top: -17vh;
-  color: white;
+  /* color: rgba(250, 247, 247, 0.927); */
+  color: #1b1464;
   height: fit-content;
   word-wrap: break-word;
   width: fit-content;
@@ -45,6 +46,11 @@
   align-items: center;
   justify-content: center;
   padding: 1em;
+  font-size: 7vw;
+}
+
+.input-mission4::placeholder {
+  font-size: 6vw;
 }
 
 .check-btn-mission4 {

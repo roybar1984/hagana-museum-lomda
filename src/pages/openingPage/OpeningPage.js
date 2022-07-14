@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import "./OpeningPage.css";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 import { useNavigate } from "react-router-dom";
 // import AnimatedPage from "../../components/AnimatedPage";
 
@@ -8,7 +8,7 @@ function OpeningPage(props) {
   useEffect(() => {
     props.setTextIndex(0);
     props.setBackgroundType("light-background");
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const navigate = useNavigate();
 
   const titlesContainerRef = useRef(null);

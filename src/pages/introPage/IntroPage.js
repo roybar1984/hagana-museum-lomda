@@ -1,18 +1,17 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./IntroPage.css";
-import { gsap } from "gsap";
-// import Character from "../../components/speechBubble/character/Character";
+// import { gsap } from "gsap";
 import { Markup } from "interweave";
 import gif from "../../media/gifs/Soldier-talking-fixed.gif";
 import NextBtn from "../../components/nextBtn/NextBtn";
-// import CharacterCircle from "../../components/characterCircle/CharacterCircle";
+
 // import AnimatedPage from "../../components/AnimatedPage";
 // import { motion } from "framer-motion";
-// import Button from "../../components/Button/Button";
 
 function IntroPage(props) {
-  const blackDivRef = useRef();
+  console.log(props.textIndex);
+  // const blackDivRef = useRef();
 
   //   useEffect(() => {
   //     if (props.isHidden) {
@@ -24,18 +23,18 @@ function IntroPage(props) {
   //     }
   //   }, [props.isHidden]);
 
-  const btnAnimations = {
-    initial: { opacity: 0, visibility: "hidden" },
-    animate: { opacity: 1, visibility: "visible" },
-    exit: { opacity: 0, visibility: "hidden" },
-  };
+  // const btnAnimations = {
+  //   initial: { opacity: 0, visibility: "hidden" },
+  //   animate: { opacity: 1, visibility: "visible" },
+  //   exit: { opacity: 0, visibility: "hidden" },
+  // };
 
   const navigate = useNavigate();
 
   useEffect(() => {
     props.setTextIndex(1);
     props.setBackgroundType("light-background");
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleClickNext = (event) => {
     if (props.textIndex === 2) {

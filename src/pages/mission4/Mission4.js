@@ -6,7 +6,6 @@ import BackBtn from "./../../components/backBtn/BackBtn";
 import TextBtn from "../../components/textBtn/TextBtn";
 import NextBtn from "../../components/nextBtn/NextBtn";
 import PhoneIcon from "../../components/phoneIcon/PhoneIcon";
-import InputField from "../../components/inputField/InputField";
 
 function Mission4(props) {
   const navigate = useNavigate();
@@ -18,7 +17,7 @@ function Mission4(props) {
   useEffect(() => {
     props.setTextIndex(7);
     props.setBackgroundType("medium-background");
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleShowMission4 = (event) => {
     setShowMission(true);

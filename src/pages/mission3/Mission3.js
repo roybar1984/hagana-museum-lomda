@@ -11,7 +11,7 @@ function Mission3(props) {
   const navigate = useNavigate();
   const [readOnly, setReadOnly] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
-  const [isAllFull, setIsAllFull] = useState(false);
+  //   const [isAllFull, setIsAllFull] = useState(false);
   //   const [answers, setAnswers] = useState([
   //     {
   //       inputText: "",
@@ -43,7 +43,7 @@ function Mission3(props) {
   useEffect(() => {
     props.setTextIndex(6);
     props.setBackgroundType("medium-background");
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   //   useEffect(() => {
   //     console.log(answers);

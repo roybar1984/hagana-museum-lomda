@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./EndPage.css";
 import { Markup } from "interweave";
@@ -12,7 +12,7 @@ function EndPage(props) {
   useEffect(() => {
     props.setTextIndex(10);
     props.setBackgroundType("dark-background");
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleMoveToAbout = (event) => {
     navigate("/aboutPage");

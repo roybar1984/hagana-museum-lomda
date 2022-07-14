@@ -45,6 +45,11 @@
   height: 3vh;
 }
 
+.input-mission2::placeholder {
+  font-size: 6vw;
+  /* color: rgba(250, 247, 247, 0.728); */
+}
+
 .answer-paragraph {
   position: absolute;
   color: #4eb233;
