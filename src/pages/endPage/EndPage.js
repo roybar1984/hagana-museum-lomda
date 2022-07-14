@@ -24,8 +24,8 @@ function EndPage(props) {
       <Confetti
         width={window.innerWidth}
         height={window.innerHeight}
-        numberOfPieces={400}
-        tweenDuration={6000}
+        numberOfPieces={500}
+        tweenDuration={9000}
         recycle={false}
       />
       <div className="bubble-container end-container">
