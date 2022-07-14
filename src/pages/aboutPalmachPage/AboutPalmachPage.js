@@ -24,7 +24,7 @@ function AboutPalmachPage(props) {
     // }
     if (scrollInnerRef.current) {
       const { scrollTop, scrollHeight, clientHeight } = scrollInnerRef.current;
-      if (scrollTop + clientHeight === scrollHeight) {
+      if (scrollTop + clientHeight >= scrollHeight) {
         console.log("reached bottom");
         setIsFinishedScrolling(true);
       }
