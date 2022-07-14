@@ -1,15 +1,15 @@
 .scroll-text-container {
-  font-size: 9vw;
-  width: 90%;
+  font-size: 2.5vw;
+  width: 55vw;
   text-align: right;
-  height: 63vh;
+  height: 30vh;
   position: relative;
   overflow-y: scroll;
-  top: -4vh;
+  top: 0vh;
   direction: ltr;
   margin-top: 2vh;
+  line-height: 1.6;
 }
-
 ::-webkit-scrollbar {
   width: 0.3em;
 }
@@ -28,40 +28,46 @@
 
 .scroll-text {
   direction: rtl;
-  margin-right: 4vw;
+  margin-right: 2vw;
   font-weight: 500;
   font-family: text-font;
   /* padding-bottom: 0.3vh; */
   /* padding-top: 0.3vh; */
 }
 
+.small-gif {
+  position: absolute;
+  right: 0vw;
+  top: 12vh;
+  width: 20vw;
+  transform: scaleX(-1);
+}
+
 .chracter-btn-container {
   display: flex;
   position: relative;
-  width: 100%;
+  width: 90vw;
   height: 30%;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  top: 0vh;
 }
 
 .start-mission-btn {
-  top: 3vh;
-  right: -2vw;
-  min-width: 45vw;
+  top: 19vh;
+
+  min-width: 24vw;
   padding: 0;
-  position: absolute;
-  right: 49vw;
-  top: 11vh;
+  position: relative;
+  right: 1vw;
   transition: visuality ease 2s;
   color: #1b1464;
-  min-height: 4vh;
-  padding: 0.2em;
+  min-height: 7vh;
+  padding: 0.3em;
   font-family: bold-text;
   font-weight: 900;
-  border: solid #1b1464 1.2vw;
-  font-size: 5.5vw;
+  border: solid #1b1464 0.7vw;
+  font-size: 3.5vw;
   background-color: #1b1464(255, 255, 255, 0);
   display: flex;
   flex-direction: column;
@@ -69,30 +75,105 @@
   justify-content: center;
 }
 
-.small-gif {
-  position: absolute;
-  right: 4vw;
-  top: -1vh;
-  width: 46%;
-  transform: scaleX(-1);
-  /* position: absolute;
+@media only screen and (max-width: 768px) {
+  .scroll-text-container {
+    font-size: 8.5vw;
+    width: 90%;
+    text-align: right;
+    height: 45vh;
+    position: relative;
+    overflow-y: scroll;
+    top: 0vh;
+    direction: ltr;
+    margin-top: 2vh;
+    line-height: 1.1;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.3em;
+  }
+
+  ::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px rgba(155, 184, 238, 0.714); */
+    box-shadow: inset 0 0 5px rgba(219, 226, 238, 0.865);
+    border-radius: 1em;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /* background: rgba(141, 183, 235, 0.618); */
+    background: rgba(255, 255, 255, 0.769);
+    border-radius: 1em;
+  }
+
+  .scroll-text {
+    direction: rtl;
+    margin-right: 4vw;
+    font-weight: 500;
+    font-family: text-font;
+
+    /* padding-bottom: 0.3vh; */
+    /* padding-top: 0.3vh; */
+  }
+
+  .chracter-btn-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 30%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    top: 4vh;
+  }
+
+  .start-mission-btn {
+    top: 3vh;
+    right: -2vw;
+    min-width: 45vw;
+    padding: 0;
+    position: absolute;
+    right: 49vw;
+    top: 11vh;
+    transition: visuality ease 2s;
+    color: #1b1464;
+    min-height: 4vh;
+    padding: 0.2em;
+    font-family: bold-text;
+    font-weight: 900;
+    border: solid #1b1464 1.2vw;
+    font-size: 5.5vw;
+    background-color: #1b1464(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .small-gif {
+    position: absolute;
+    right: 4vw;
+    top: -1vh;
+    width: 46%;
+    transform: scaleX(-1);
+    /* position: absolute;
   top: 72vh;
   right: 2vw; */
-}
+  }
 
-.light-text {
-  color: white;
-}
+  .light-text {
+    color: white;
+  }
 
-.next-btn-scroll-page {
-  bottom: -10vw;
-  right: 76vw;
-}
+  .next-btn-scroll-page {
+    bottom: 13vw;
+    right: 76vw;
+  }
 
-.scroll-text-container-dark {
-  width: 82%;
-}
+  .scroll-text-container-dark {
+    width: 82%;
+  }
 
-.scroll-text-smaller {
-  font-size: 8vw;
+  .scroll-text-smaller {
+    font-size: 8vw;
+  }
 }
