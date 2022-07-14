@@ -9,8 +9,9 @@
 }
 
 .mission4-question-paragrapgh {
-  top: 5vh;
+  top: 6vh;
   font-size: 8vw;
+  margin-top: 4vh;
 }
 
 .phone-number-text {
@@ -25,6 +26,8 @@
   top: -27vh;
   border: solid white 2px;
   border-radius: 1em;
+
+  margin-bottom: 5vh;
 }
 
 .continue-btn-mission4 {
@@ -55,14 +58,14 @@
 
 .check-btn-mission4 {
   position: absolute;
-  top: 60vh;
+  top: 64vh;
   border: solid white;
   color: white;
 }
 
 .answer-paragrapgh-mission-4 {
-  width: 85vw;
+  width: 82vw;
   color: #b3faa0;
-  font-size: 7vw;
-  top: 58vh;
+  font-size: 6vw;
+  top: 62vh;
 }

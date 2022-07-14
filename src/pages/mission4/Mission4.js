@@ -99,7 +99,7 @@ function Mission4(props) {
             {answer && !isFinished && (
               <TextBtn
                 handleClick={handleCheckMission4}
-                className="check-btn-mission4"
+                className="check-btn check-btn-mission4"
                 btnText="בדיקה"
               />
             )}
