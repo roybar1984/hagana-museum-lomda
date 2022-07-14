@@ -109,13 +109,13 @@
   }
 
   .character-gif {
-    width: 68%;
+    width: 66%;
     position: relative;
     top: 1vh;
   }
 
   .intro-text {
-    font-size: 9vw;
+    font-size: 8vw;
     width: 80%;
     font-weight: 500;
     position: relative;
