@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./AboutPalmachPage.css";
 import { Markup } from "interweave";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +7,7 @@ import BackBtn from "../../components/backBtn/BackBtn";
 import NextBtn from "./../../components/nextBtn/NextBtn";
 
 function AboutPalmachPage(props) {
+  const scrollInnerRef = useRef();
   useEffect(() => {
     props.setTextIndex(props.textIndex);
     props.setBackgroundType(props.backgroundType);
@@ -16,10 +17,17 @@ function AboutPalmachPage(props) {
   const [isFinishedScrolling, setIsFinishedScrolling] = useState(false);
 
   const handleScroll = (e) => {
-    const bottom =
-      e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
-    if (bottom) {
-      setIsFinishedScrolling(true);
+    // const bottom =
+    //   e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
+    // if (bottom) {
+    //   setIsFinishedScrolling(true);
+    // }
+    if (scrollInnerRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } = scrollInnerRef.current;
+      if (scrollTop + clientHeight === scrollHeight) {
+        console.log("reached bottom");
+        setIsFinishedScrolling(true);
+      }
     }
   };
 
@@ -41,6 +49,7 @@ function AboutPalmachPage(props) {
       </h1>
       <div
         onScroll={handleScroll}
+        ref={scrollInnerRef}
         className="scroll-text-container text scroll-text-container-dark"
       >
         <div
