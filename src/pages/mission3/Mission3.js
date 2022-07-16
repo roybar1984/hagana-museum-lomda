@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import "./Mission3.css";
 import BackBtn from "./../../components/backBtn/BackBtn";
 import { Markup } from "interweave";
@@ -11,7 +11,7 @@ function Mission3(props) {
   const navigate = useNavigate();
   const [readOnly, setReadOnly] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
-  //   const [isAllFull, setIsAllFull] = useState(false);
+  const [isAllFull, setIsAllFull] = useState(false);
   //   const [answers, setAnswers] = useState([
   //     {
   //       inputText: "",
@@ -33,24 +33,59 @@ function Mission3(props) {
   //     },
   //   ]);
 
-  const [ans0, setAns0] = useState("");
-  const [ans1, setAns1] = useState("");
-  const [ans2, setAns2] = useState("");
-  const [ans3, setAns3] = useState("");
-  const [ans4, setAns4] = useState("");
-  const [ans5, setAns5] = useState("");
+  const initialState = {
+    ans0: "",
+    ans1: "",
+    ans2: "",
+    ans3: "",
+    ans4: "",
+    ans5: "",
+  };
 
-  useEffect(() => {
-    props.setTextIndex(6);
-    props.setBackgroundType("medium-background");
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  const reducer = (state, action) => {
+    let newState;
+    switch (action.inputNumber) {
+      case 0:
+        newState = { ...state, ans0: action.inputValue };
+        break;
+      case 1:
+        newState = { ...state, ans1: action.inputValue };
+        break;
+      case 2:
+        newState = { ...state, ans2: action.inputValue };
+        break;
+      case 3:
+        newState = { ...state, ans3: action.inputValue };
+        break;
+      case 4:
+        newState = { ...state, ans4: action.inputValue };
+        break;
+      case 5:
+        newState = { ...state, ans5: action.inputValue };
+        break;
+      default:
+        throw new Error();
+    }
+    // checkIfAllFull(newState);
+    let isAllTrue = true;
+    Object.keys(newState).forEach(function(key, index) {
+      if (!newState[key]) {
+        isAllTrue = false;
+        setIsAllFull(false);
+      }
+    });
+    if (isAllTrue) {
+      setIsAllFull(true);
+    }
+    return newState;
+  };
 
-  //   useEffect(() => {
-  //     console.log(answers);
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  //   const checkIfAllFull = (newState) => {
   //     let isAllTrue = true;
-  //     Array.from(answers).forEach((input, index) => {
-  //       //   console.log(input);
-  //       if (!input.inputText) {
+  //     Object.keys(newState).forEach(function(key, index) {
+  //       if (!newState[key]) {
   //         isAllTrue = false;
   //         setIsAllFull(false);
   //       }
@@ -58,59 +93,17 @@ function Mission3(props) {
   //     if (isAllTrue) {
   //       setIsAllFull(true);
   //     }
-  //     console.log(answers);
   //     return;
-  //
-  //   }, [answers]);
-
-  //     const
-  //   const initialAnswers = [
-  //     { ans1: "" },
-  //     { ans2: "" },
-  //     { ans3: "" },
-  //     { ans4: "" },
-  //     { ans5: "" },
-  //     { ans6: "" },
-  //   ];
-
-  //   const [answers, setAnswers] = useState(initialAnswers);
-  //   const updateObjectInArray = () => {
-  //     setAnswers((current) =>
-  //       current.map((obj, index) => {
-  //         if (obj.id === 2) {
-  //           return { ...obj, name: "Sophia", country: "Sweden" };
-  //         }
-
-  //         return obj;
-  //       })
-  //     );
   //   };
+
+  useEffect(() => {
+    props.setTextIndex(6);
+    props.setBackgroundType("medium-background");
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleCheckMission3 = (event) => {
     setIsFinished(true);
     setReadOnly(true);
-
-    // let answer = event.target.value;
-    // setIsClicked(true);
-
-    // if (answer === props.arrLetters[props.id].answer) {
-    //   setIsCorrect(true);
-    //   // if (parseInt(fieldIndex, 10) < numOfFields) {
-    //   //   // Get the next input field
-    //   //   const nextSibling = document.querySelector(
-    //   //     `input[name=ssn-${parseInt(fieldIndex, 10) + 1}]`
-    //   //   );
-
-    //   //   // If found, focus the next field
-    //   //   if (nextSibling !== null) {
-    //   //     nextSibling.focus();
-    //   //   }
-    //   // }
-    // } else {
-    //   setIsCorrect(false);
-    // }
-
-    // //  inputRef.current.blur();
   };
 
   const handleMoveMission4 = (event) => {
@@ -141,8 +134,10 @@ function Mission3(props) {
             id={0}
             // answer={answers}
             // setAnswer={setAnswers}
-            answer={ans0}
-            setAnswer={setAns0}
+            answer={state.ans0}
+            setAnswer={(value) =>
+              dispatch({ inputNumber: 0, inputValue: value })
+            }
             textIndex={6}
             readOnly={readOnly}
             setReadOnly={setReadOnly}
@@ -159,8 +154,12 @@ function Mission3(props) {
             id={1}
             // answer={answers}
             // setAnswer={setAnswers}
-            answer={ans1}
-            setAnswer={setAns1}
+            // answer={ans1}
+            // setAnswer={setAns1}
+            answer={state.ans1}
+            setAnswer={(value) =>
+              dispatch({ inputNumber: 1, inputValue: value })
+            }
             textIndex={6}
             readOnly={readOnly}
             setReadOnly={setReadOnly}
@@ -177,8 +176,12 @@ function Mission3(props) {
             id={2}
             // answer={answers}
             // setAnswer={setAnswers}
-            answer={ans2}
-            setAnswer={setAns2}
+            // answer={ans2}
+            // setAnswer={setAns2}
+            answer={state.ans2}
+            setAnswer={(value) =>
+              dispatch({ inputNumber: 2, inputValue: value })
+            }
             textIndex={6}
             readOnly={readOnly}
             setReadOnly={setReadOnly}
@@ -195,8 +198,12 @@ function Mission3(props) {
             id={3}
             // answer={answers}
             // setAnswer={setAnswers}
-            answer={ans3}
-            setAnswer={setAns3}
+            // answer={ans3}
+            // setAnswer={setAns3}
+            answer={state.ans3}
+            setAnswer={(value) =>
+              dispatch({ inputNumber: 3, inputValue: value })
+            }
             textIndex={6}
             readOnly={readOnly}
             setReadOnly={setReadOnly}
@@ -213,8 +220,12 @@ function Mission3(props) {
             id={4}
             // answer={answers}
             // setAnswer={setAnswers}
-            answer={ans4}
-            setAnswer={setAns4}
+            // answer={ans4}
+            // setAnswer={setAns4}
+            answer={state.ans4}
+            setAnswer={(value) =>
+              dispatch({ inputNumber: 4, inputValue: value })
+            }
             textIndex={6}
             readOnly={readOnly}
             setReadOnly={setReadOnly}
@@ -231,8 +242,12 @@ function Mission3(props) {
             id={5}
             // answer={answers}
             // setAnswer={setAnswers}
-            answer={ans5}
-            setAnswer={setAns5}
+            // answer={ans5}
+            // setAnswer={setAns5}
+            answer={state.ans5}
+            setAnswer={(value) =>
+              dispatch({ inputNumber: 5, inputValue: value })
+            }
             textIndex={6}
             readOnly={readOnly}
             setReadOnly={setReadOnly}
@@ -241,7 +256,8 @@ function Mission3(props) {
             checkAns={true}
           />
         </div>
-        {ans0 && ans1 && ans2 && ans3 && ans4 && ans5 && !isFinished && (
+
+        {isAllFull && !isFinished && (
           <TextBtn
             handleClick={handleCheckMission3}
             className="check-btn-mission3"

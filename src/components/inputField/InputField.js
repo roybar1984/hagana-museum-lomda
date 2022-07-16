@@ -26,17 +26,6 @@ function InputField(props) {
               answer.trim() === props.Data[props.textIndex].answers[props.id]
             ) {
               setIsCorrect(true);
-              //   // if (parseInt(fieldIndex, 10) < numOfFields) {
-              //   //   // Get the next input field
-              //   //   const nextSibling = document.querySelector(
-              //   //     `input[name=ssn-${parseInt(fieldIndex, 10) + 1}]`
-              //   //   );
-
-              //   //   // If found, focus the next field
-              //   //   if (nextSibling !== null) {
-              //   //     nextSibling.focus();
-              //   //   }
-              // }
             } else {
               setIsCorrect(false);
             }
