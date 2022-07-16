@@ -83,6 +83,7 @@
   top: -4vh;
   height: fit-content;
   padding-top: 1em;
+  margin-top: 2vh;
 }
 
 .number-input {
@@ -113,7 +114,7 @@
 
 .feedback-text {
   position: absolute;
-  top: 48vh;
+  top: 53vh;
   font-family: bold-text;
   font-size: 8vw;
 }
