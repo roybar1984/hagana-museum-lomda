@@ -1,5 +1,5 @@
 import { Markup } from "interweave";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import "./Mission2.css";
 import NextBtn from "../../components/nextBtn/NextBtn";
 import { useNavigate } from "react-router-dom";
@@ -10,10 +10,42 @@ import TextBtn from "../../components/textBtn/TextBtn";
 function Mission2(props) {
   const navigate = useNavigate();
   const [isFinished, setIsFinished] = useState(false);
-  const [ans1, setAns1] = useState("");
-  const [ans2, setAns2] = useState("");
   const [readOnly, setReadOnly] = useState(false);
-  // const [isInputClicked, setIsInputClicked] = useState(false);
+  const [isAllFull, setIsAllFull] = useState(false);
+
+  const initialState = {
+    ans1: "",
+    ans2: "",
+  };
+
+  const reducer = (state, action) => {
+    let newState;
+    switch (action.inputNumber) {
+      case 1:
+        newState = { ...state, ans1: action.inputValue };
+        break;
+      case 2:
+        newState = { ...state, ans2: action.inputValue };
+        break;
+      default:
+        throw new Error();
+    }
+    // checkIfAllFull(newState);
+    let isAllTrue = true;
+    Object.keys(newState).forEach(function(key, index) {
+      if (!newState[key]) {
+        isAllTrue = false;
+        setIsAllFull(false);
+      }
+    });
+    if (isAllTrue) {
+      setIsAllFull(true);
+    }
+    console.log(newState);
+    return newState;
+  };
+
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
     props.setTextIndex(5);
@@ -24,7 +56,6 @@ function Mission2(props) {
   const handleCheckMission2 = (event) => {
     setIsFinished(true);
     setReadOnly(true);
-    //  inputRef.current.blur();
   };
 
   const handleMoveMission3 = (event) => {
@@ -47,8 +78,8 @@ function Mission2(props) {
           placeholder="הקלידו כאן"
           type="text"
           maxLength={5}
-          answer={ans1}
-          setAnswer={setAns1}
+          answer={state.ans1}
+          setAnswer={(value) => dispatch({ inputNumber: 1, inputValue: value })}
           textIndex={5}
           readOnly={readOnly}
           setReadOnly={setReadOnly}
@@ -62,8 +93,8 @@ function Mission2(props) {
           placeholder="הקלידו כאן"
           type="text"
           maxLength={5}
-          answer={ans2}
-          setAnswer={setAns2}
+          answer={state.ans2}
+          setAnswer={(value) => dispatch({ inputNumber: 2, inputValue: value })}
           textIndex={5}
           readOnly={readOnly}
           setReadOnly={setReadOnly}
@@ -74,7 +105,7 @@ function Mission2(props) {
         />
       </div>
 
-      {ans1 && ans2 && !isFinished && (
+      {isAllFull && !isFinished && (
         <TextBtn
           handleClick={handleCheckMission2}
           className="check-btn"
