@@ -18,12 +18,15 @@
 }
 
 .mission5-instruction-paragrapgh {
-  margin-bottom: 1vh;
+  position: absolute;
+  margin-bottom: 25vh;
   font-size: 6.5vw;
 }
 
 .input-mission5 {
   color: white;
+  position: absolute;
+  margin-bottom: 8vh;
 }
 
 .input-mission5::-webkit-input-placeholder {
