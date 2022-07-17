@@ -28,7 +28,7 @@
   color: white;
   position: absolute;
   margin-bottom: 8vh;
-  margin-top: 6vh;
+  margin-top: 11vh;
 }
 
 .input-mission5::-webkit-input-placeholder {
@@ -54,7 +54,7 @@
 
 .answer-paragrapgh-mission-5 {
   position: relative;
-  top: 3.5vh;
+  top: 6.5vh;
   visibility: hidden;
 }
 
