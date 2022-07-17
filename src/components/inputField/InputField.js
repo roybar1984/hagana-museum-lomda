@@ -3,12 +3,16 @@ import "./InputField.css";
 
 function InputField(props) {
   const [isCorrect, setIsCorrect] = useState("");
-  // console.log(props.checkAns);
+
   return (
     <input
-      className={`${props.className} ${
-        isCorrect && props.isFinished && props.checkAns && "correct"
-      } ${!isCorrect && props.isFinished && props.checkAns && "wrong"}`}
+      className={`${props.className} ${isCorrect &&
+        props.isFinished &&
+        props.checkAns &&
+        "correct"} ${!isCorrect &&
+        props.isFinished &&
+        props.checkAns &&
+        "wrong"}`}
       // className={props.className}
       maxLength={props.maxLength}
       readOnly={props.readOnly}
