@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 70vh;
+  height: 60vh;
   position: absolute;
   top: 18vh;
 }
@@ -19,7 +19,7 @@
 
 .mission5-instruction-paragrapgh {
   margin-bottom: 1vh;
-  font-size: 7vw;
+  font-size: 6.5vw;
 }
 
 .input-mission5 {
@@ -44,7 +44,7 @@
 }
 
 .check-btn-mission5 {
-  top: 74vh;
+  top: 69vh;
 }
 
 .answer-paragrapgh-mission-5 {
