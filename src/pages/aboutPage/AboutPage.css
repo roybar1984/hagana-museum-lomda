@@ -3,10 +3,11 @@
   color: whitesmoke;
   font-size: 23vw;
   border: none;
+  margin-bottom: 3vh;
 }
 
 .about-paragtapgh {
-  font-size: 10vw;
+  font-size: 9vw;
   color: white;
   font-family: bold-text;
   margin-bottom: -2.7vh;
@@ -18,4 +19,7 @@
   align-items: center;
   justify-content: space-around;
   height: 60vh;
+  position: relative;
+  top: -4vh;
+  margin-top: 3vh;
 }
