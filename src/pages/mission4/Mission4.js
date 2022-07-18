@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import "./Mission4.css";
 import { Markup } from "interweave";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +9,9 @@ import NextBtn from "../../components/nextBtn/NextBtn";
 import PhoneIcon from "../../components/phoneIcon/PhoneIcon";
 
 function Mission4(props) {
+  const phoneNumberRef = useRef();
+  const textAreaRef = useRef();
+  const questionRef = useRef();
   const navigate = useNavigate();
   const [showMission, setShowMission] = useState(false);
   const [readOnly, setReadOnly] = useState(false);
@@ -32,6 +36,40 @@ function Mission4(props) {
     navigate("/introMission5");
   };
 
+  useEffect(() => {
+    if (showMission) {
+      const mission4AnimationTl = gsap.timeline();
+      mission4AnimationTl
+        .from(phoneNumberRef.current, {
+          y: 70,
+          opacity: 0.5,
+          border: "none",
+          ease: "sine",
+          duration: 1.2,
+        })
+        .from(
+          questionRef.current,
+          {
+            opacity: 0,
+            // y: 30,
+            // scale: 0,
+            ease: "sine",
+            duration: 1.7,
+          },
+          "+=0.5"
+        )
+        .from(
+          textAreaRef.current,
+          {
+            opacity: 0,
+            ease: "sine",
+            duration: 1.5,
+          },
+          "-=0.2"
+        );
+    }
+  }, [showMission]);
+
   return (
     <>
       <div className="mission-container mission4-container">
@@ -44,6 +82,7 @@ function Mission4(props) {
           <Markup content={props.Data[7].title} />
         </h1>
         <p
+          ref={questionRef}
           className={`mission-instruction-paragraph  ${
             showMission
               ? "mission4-question-paragrapgh"
@@ -58,6 +97,7 @@ function Mission4(props) {
         </p>
 
         <p
+          ref={phoneNumberRef}
           className={`mission-instruction-paragraph ${
             !showMission ? "phone-number" : "phone-number-for-question"
           }`}
@@ -77,6 +117,7 @@ function Mission4(props) {
         {showMission && (
           <>
             <textarea
+              ref={textAreaRef}
               className="input-mission2 input-mission4"
               placeholder="הקלידו כאן"
               type="text"
