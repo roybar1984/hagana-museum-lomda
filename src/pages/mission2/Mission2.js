@@ -77,7 +77,7 @@ function Mission2(props) {
           className="input-mission2"
           placeholder="הקלידו כאן"
           type="text"
-          maxLength={5}
+          maxLength={8}
           answer={state.ans1}
           setAnswer={(value) => dispatch({ inputNumber: 1, inputValue: value })}
           textIndex={5}
@@ -92,7 +92,7 @@ function Mission2(props) {
           className="input-mission2"
           placeholder="הקלידו כאן"
           type="text"
-          maxLength={5}
+          maxLength={8}
           answer={state.ans2}
           setAnswer={(value) => dispatch({ inputNumber: 2, inputValue: value })}
           textIndex={5}

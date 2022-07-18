@@ -12,7 +12,7 @@ function AboutPage(props) {
       <div className="paragrapghs-container">
         <p className="about-paragtapgh">
           ראש מדור מט"ח: <br />
-          רס"ן מור דהן
+          רס"ן מור יהלומי - דאהן
         </p>
         <p className="about-paragtapgh">
           מפקדת הדיגיטל: <br />

@@ -39,7 +39,7 @@ function EndPage(props) {
         </p>
         <TextBtn
           handleClick={handleMoveToAbout}
-          className="check-btn-mission3 to-about-page-btn"
+          className="check-btn-mission3 to-about-page-btn fade-animation"
           btnText=" אודות"
         />
       </div>
