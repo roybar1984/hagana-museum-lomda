@@ -13,7 +13,6 @@ function InputField(props) {
         props.isFinished &&
         props.checkAns &&
         "wrong"}`}
-      // className={props.className}
       maxLength={props.maxLength}
       readOnly={props.readOnly}
       placeholder={props.placeholder}

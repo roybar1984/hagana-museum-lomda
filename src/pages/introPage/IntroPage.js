@@ -6,7 +6,7 @@ import { Markup } from "interweave";
 import gif from "../../media/gifs/Soldier-talking-fixed.gif";
 import NextBtn from "../../components/nextBtn/NextBtn";
 
-// import AnimatedPage from "../../components/AnimatedPage";
+import AnimatedPage from "../../components/AnimatedPage";
 // import { motion } from "framer-motion";
 
 function IntroPage(props) {
@@ -44,39 +44,22 @@ function IntroPage(props) {
     props.setTextIndex(props.textIndex + 1);
   };
 
-  //   useEffect(() => {
-  //     console.log("inside the first useState");
-  //     props.setIsHidden("hidden");
-  //     props.setTextIndex(1);
-  //     props.setIsPreMissionPages(false);
-  //     props.setIsStarted(true);
-
-  //     setTimeout(function() {
-  //       props.setIsHidden((prevState) => {
-  //         prevState = "";
-  //       });
-  //     }, props.wait);
-
-  //     return () => {
-  //       props.setIsPreMissionPages(false);
-  //       props.setIsStarted(true);
-  //       props.setTextIndex(1);
-  //     };
-  //   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  //
   return (
-    // <AnimatedPage>
-    <div className="bubble-container">
-      {/* {props.isHidden && <div ref={blackDivRef} className="black-div"></div>}
+    <AnimatedPage>
+      <div className="bubble-container">
+        {/* {props.isHidden && <div ref={blackDivRef} className="black-div"></div>}
       {props.isPreMissionPages && ( */}
-      <h1 className="mission-title">
-        <Markup content={props.Data[props.textIndex].title} />
-      </h1>
-      <img className="character-gif" src={gif} alt="loading..." />
-      <p className="text intro-text">
-        <Markup content={props.Data[props.textIndex].text} />
-      </p>
-      <NextBtn handleClickNext={handleClickNext} />
-    </div>
+        <h1 className="mission-title">
+          <Markup content={props.Data[props.textIndex].title} />
+        </h1>
+        <img className="character-gif" src={gif} alt="loading..." />
+        <p className="text intro-text">
+          <Markup content={props.Data[props.textIndex].text} />
+        </p>
+        <NextBtn handleClickNext={handleClickNext} />
+      </div>
+    </AnimatedPage>
   );
 }
 
