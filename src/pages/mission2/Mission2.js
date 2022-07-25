@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import BackBtn from "../../components/backBtn/BackBtn";
 import InputField from "../../components/inputField/InputField";
 import TextBtn from "../../components/textBtn/TextBtn";
+import AnimatedPage from "../../components/AnimatedPage";
 
 function Mission2(props) {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ function Mission2(props) {
     }
     // checkIfAllFull(newState);
     let isAllTrue = true;
-    Object.keys(newState).forEach(function(key, index) {
+    Object.keys(newState).forEach(function (key, index) {
       if (!newState[key]) {
         isAllTrue = false;
         setIsAllFull(false);
@@ -63,70 +64,78 @@ function Mission2(props) {
   };
 
   return (
-    <div className="mission-container mission2-container">
-      <BackBtn textIndex={props.textIndex} setTextIndex={props.setTextIndex} />
-      <h1 className="mission-title">
-        {" "}
-        <Markup content={props.Data[5].title} />
-      </h1>
-      <p className="mission-instruction-paragraph">
-        <Markup content={props.Data[5].instruction} />
-      </p>
-      <div className="input-fields-container">
-        <InputField
-          className="input-mission2"
-          placeholder="הקלידו כאן"
-          type="text"
-          maxLength={8}
-          answer={state.ans1}
-          setAnswer={(value) => dispatch({ inputNumber: 1, inputValue: value })}
-          textIndex={5}
-          readOnly={readOnly}
-          setReadOnly={setReadOnly}
-          id={0}
-          Data={props.Data}
-          // isInputClicked={isInputClicked}
-          // setIsInputClicked={setIsInputClicked}
-        />
-        <InputField
-          className="input-mission2"
-          placeholder="הקלידו כאן"
-          type="text"
-          maxLength={8}
-          answer={state.ans2}
-          setAnswer={(value) => dispatch({ inputNumber: 2, inputValue: value })}
-          textIndex={5}
-          readOnly={readOnly}
-          setReadOnly={setReadOnly}
-          id={1}
-          Data={props.Data}
-          // isInputClicked={isInputClicked}
-          // setIsInputClicked={setIsInputClicked}
-        />
-      </div>
-
-      {isAllFull && !isFinished && (
-        <TextBtn
-          handleClick={handleCheckMission2}
-          className="check-btn"
-          btnText="בדיקה"
-        />
-      )}
-
-      {isFinished && (
-        <p className="answer-paragraph fade-animation">
-          <Markup content={props.Data[5].answerText} />{" "}
-        </p>
-      )}
-
-      {isFinished && (
-        <NextBtn
+    <AnimatedPage>
+      <div className="mission-container mission2-container">
+        <BackBtn
           textIndex={props.textIndex}
-          handleClickNext={handleMoveMission3}
+          setTextIndex={props.setTextIndex}
         />
-      )}
+        <h1 className="mission-title">
+          {" "}
+          <Markup content={props.Data[5].title} />
+        </h1>
+        <p className="mission-instruction-paragraph">
+          <Markup content={props.Data[5].instruction} />
+        </p>
+        <div className="input-fields-container">
+          <InputField
+            className="input-mission2"
+            placeholder="הקלידו כאן"
+            type="text"
+            maxLength={8}
+            answer={state.ans1}
+            setAnswer={(value) =>
+              dispatch({ inputNumber: 1, inputValue: value })
+            }
+            textIndex={5}
+            readOnly={readOnly}
+            setReadOnly={setReadOnly}
+            id={0}
+            Data={props.Data}
+            // isInputClicked={isInputClicked}
+            // setIsInputClicked={setIsInputClicked}
+          />
+          <InputField
+            className="input-mission2"
+            placeholder="הקלידו כאן"
+            type="text"
+            maxLength={8}
+            answer={state.ans2}
+            setAnswer={(value) =>
+              dispatch({ inputNumber: 2, inputValue: value })
+            }
+            textIndex={5}
+            readOnly={readOnly}
+            setReadOnly={setReadOnly}
+            id={1}
+            Data={props.Data}
+            // isInputClicked={isInputClicked}
+            // setIsInputClicked={setIsInputClicked}
+          />
+        </div>
 
-      {/* 
+        {isAllFull && !isFinished && (
+          <TextBtn
+            handleClick={handleCheckMission2}
+            className="check-btn"
+            btnText="בדיקה"
+          />
+        )}
+
+        {isFinished && (
+          <p className="answer-paragraph fade-animation">
+            <Markup content={props.Data[5].answerText} />{" "}
+          </p>
+        )}
+
+        {isFinished && (
+          <NextBtn
+            textIndex={props.textIndex}
+            handleClickNext={handleMoveMission3}
+          />
+        )}
+
+        {/* 
       {isFinished && [
         <>
           <p className="answer-paragraph fade-animation">
@@ -138,7 +147,8 @@ function Mission2(props) {
           />
         </>,
       ]} */}
-    </div>
+      </div>
+    </AnimatedPage>
   );
 }
 

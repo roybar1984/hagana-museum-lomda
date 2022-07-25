@@ -6,7 +6,7 @@ import InputField from "../../components/inputField/InputField";
 import TextBtn from "../../components/textBtn/TextBtn";
 import NextBtn from "../../components/nextBtn/NextBtn";
 import { useNavigate } from "react-router-dom";
-import ChangeBackgroundAnimation from "../../components/ChangeBackgroundAnimation";
+import AnimatedPage from "../../components/AnimatedPage";
 
 function Mission3(props) {
   const navigate = useNavigate();
@@ -69,7 +69,7 @@ function Mission3(props) {
     }
     // checkIfAllFull(newState);
     let isAllTrue = true;
-    Object.keys(newState).forEach(function(key, index) {
+    Object.keys(newState).forEach(function (key, index) {
       if (!newState[key]) {
         isAllTrue = false;
         setIsAllFull(false);
@@ -112,7 +112,7 @@ function Mission3(props) {
   };
 
   return (
-    <ChangeBackgroundAnimation>
+    <AnimatedPage>
       <div className="mission-container mission3-container">
         <BackBtn
           textIndex={props.textIndex}
@@ -287,7 +287,7 @@ function Mission3(props) {
           />
         )} */}
       </div>
-    </ChangeBackgroundAnimation>
+    </AnimatedPage>
   );
 }
 

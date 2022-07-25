@@ -38,19 +38,29 @@ body {
   background-size: 100% 100%;
   font-family: text-font;
   color: #1b1464;
-
+  transition: opacity 1s ease-in-out;
+  transition: background-image 2s;
   /* background: #a5eaf0b6; */
 }
 .light-background {
   background-image: url(./media/openingBackground.png);
+  opacity: 1;
 }
 
 .medium-background {
   background-image: url(./media/medium-background.png);
+  -webkit-transform: translate3d(0, 0, 0.01);
+  transform: translate3d(0, 0, 0.01);
+  opacity: 1;
 }
 
 .dark-background {
   background-image: url(./media/dark.png);
+  opacity: 1;
+}
+
+.background.active {
+  opacity: 1;
 }
 
 .text {

@@ -70,7 +70,6 @@ function OpeningPage(props) {
   }
 
   return (
-    // <AnimatedPage>
     <>
       <div ref={titlesContainerRef} className="titles-container">
         <h1 ref={title1} className="opening-titles opening-title1">
@@ -88,7 +87,6 @@ function OpeningPage(props) {
         בואו נתחיל
       </button>
     </>
-    // </AnimatedPage>
   );
 }
 

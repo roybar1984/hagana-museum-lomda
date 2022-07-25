@@ -54,7 +54,11 @@ function IntroPage(props) {
           <Markup content={props.Data[props.textIndex].title} />
         </h1>
         <img className="character-gif" src={gif} alt="loading..." />
-        <p className="text intro-text">
+        <p
+          className={`text intro-text ${
+            props.textIndex === 2 && "fade-animation"
+          }`}
+        >
           <Markup content={props.Data[props.textIndex].text} />
         </p>
         <NextBtn handleClickNext={handleClickNext} />

@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function ChangeBackgroundAnimation({ children }) {
+function ScaleAnimationpage({ children }) {
   const animations = {
-    initial: { scaleY: 0 },
-    animate: { scaleY: 1 },
-    exit: { opacity: 0 },
+    initial: { scaleX: 0, scaleY: 0 },
+    animate: { scaleX: 1, scaleY: 1 },
+    exit: { scaleX: 0, scaleY: 0 },
   };
   return (
     <motion.div
@@ -20,4 +20,4 @@ function ChangeBackgroundAnimation({ children }) {
   );
 }
 
-export default ChangeBackgroundAnimation;
+export default ScaleAnimationpage;

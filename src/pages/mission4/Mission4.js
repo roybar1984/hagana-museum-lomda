@@ -7,6 +7,7 @@ import BackBtn from "./../../components/backBtn/BackBtn";
 import TextBtn from "../../components/textBtn/TextBtn";
 import NextBtn from "../../components/nextBtn/NextBtn";
 import PhoneIcon from "../../components/phoneIcon/PhoneIcon";
+import AnimatedPage from "../../components/AnimatedPage";
 
 function Mission4(props) {
   const phoneNumberRef = useRef();
@@ -71,95 +72,97 @@ function Mission4(props) {
   }, [showMission]);
 
   return (
-    <>
-      <div className="mission-container mission4-container">
-        <BackBtn
-          textIndex={props.textIndex}
-          setTextIndex={props.setTextIndex}
-        />
-        <h1 className="mission-title">
-          {" "}
-          <Markup content={props.Data[7].title} />
-        </h1>
-        <p
-          ref={questionRef}
-          className={`mission-instruction-paragraph  ${
-            showMission
-              ? "mission4-question-paragrapgh"
-              : "mission4-instruction-paragrapgh"
-          }`}
-        >
-          {!showMission ? (
-            <Markup content={props.Data[7].instruction} />
-          ) : (
-            <Markup content={props.Data[7].missionText} />
-          )}
-        </p>
+    <AnimatedPage>
+      <>
+        <div className="mission-container mission4-container">
+          <BackBtn
+            textIndex={props.textIndex}
+            setTextIndex={props.setTextIndex}
+          />
+          <h1 className="mission-title">
+            {" "}
+            <Markup content={props.Data[7].title} />
+          </h1>
+          <p
+            ref={questionRef}
+            className={`mission-instruction-paragraph  ${
+              showMission
+                ? "mission4-question-paragrapgh"
+                : "mission4-instruction-paragrapgh"
+            }`}
+          >
+            {!showMission ? (
+              <Markup content={props.Data[7].instruction} />
+            ) : (
+              <Markup content={props.Data[7].missionText} />
+            )}
+          </p>
 
-        <p
-          ref={phoneNumberRef}
-          className={`mission-instruction-paragraph ${
-            !showMission ? "phone-number" : "phone-number-for-question"
-          }`}
-        >
-          <Markup content={props.Data[7].phoneNumber} />
-        </p>
-        {!showMission && (
-          <>
-            <PhoneIcon />
-            <TextBtn
-              handleClick={handleShowMission4}
-              className="check-btn check-btn-mission3 continue-btn-mission4"
-              btnText={props.Data[7].btnText}
-            />
-          </>
-        )}
-        {showMission && (
-          <>
-            <textarea
-              ref={textAreaRef}
-              className="input-mission2 input-mission4"
-              placeholder="הקלידו כאן"
-              type="text"
-              readOnly={readOnly}
-              onChange={(event) => {
-                let answer = event.target.value;
-                if (answer !== "" && answer.trim() !== "") {
-                  setAnswer(answer.trim());
-                }
-              }}
-              //   setReadOnly={setReadOnly}
-              //   isFinished={isFinished}
-              //   answer={answer}
-              //   setAnswer={setAnswer}
-              //   textIndex={7}
-              //   id={0}
-              //   Data={props.Data}
-              //   checkAns={false}
-            />
-            {answer && !isFinished && (
+          <p
+            ref={phoneNumberRef}
+            className={`mission-instruction-paragraph ${
+              !showMission ? "phone-number" : "phone-number-for-question"
+            }`}
+          >
+            <Markup content={props.Data[7].phoneNumber} />
+          </p>
+          {!showMission && (
+            <>
+              <PhoneIcon />
               <TextBtn
-                handleClick={handleCheckMission4}
-                className="check-btn check-btn-mission4"
-                btnText="בדיקה"
+                handleClick={handleShowMission4}
+                className="check-btn check-btn-mission3 continue-btn-mission4"
+                btnText={props.Data[7].btnText}
               />
-            )}
-            {isFinished && (
-              <>
-                <p className="answer-paragraph answer-paragrapgh-mission-4 fade-animation">
-                  <Markup content={props.Data[7].answerText} />
-                </p>
-                <NextBtn
-                  fillClassName={"light-btn"}
-                  textIndex={props.textIndex}
-                  handleClickNext={handleMoveIntroMission5}
+            </>
+          )}
+          {showMission && (
+            <>
+              <textarea
+                ref={textAreaRef}
+                className="input-mission2 input-mission4"
+                placeholder="הקלידו כאן"
+                type="text"
+                readOnly={readOnly}
+                onChange={(event) => {
+                  let answer = event.target.value;
+                  if (answer !== "" && answer.trim() !== "") {
+                    setAnswer(answer.trim());
+                  }
+                }}
+                //   setReadOnly={setReadOnly}
+                //   isFinished={isFinished}
+                //   answer={answer}
+                //   setAnswer={setAnswer}
+                //   textIndex={7}
+                //   id={0}
+                //   Data={props.Data}
+                //   checkAns={false}
+              />
+              {answer && !isFinished && (
+                <TextBtn
+                  handleClick={handleCheckMission4}
+                  className="check-btn check-btn-mission4"
+                  btnText="בדיקה"
                 />
-              </>
-            )}
-          </>
-        )}
-      </div>
-    </>
+              )}
+              {isFinished && (
+                <>
+                  <p className="answer-paragraph answer-paragrapgh-mission-4 fade-animation">
+                    <Markup content={props.Data[7].answerText} />
+                  </p>
+                  <NextBtn
+                    fillClassName={"light-btn"}
+                    textIndex={props.textIndex}
+                    handleClickNext={handleMoveIntroMission5}
+                  />
+                </>
+              )}
+            </>
+          )}
+        </div>
+      </>
+    </AnimatedPage>
   );
 }
 
