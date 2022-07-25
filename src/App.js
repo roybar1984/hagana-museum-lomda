@@ -14,7 +14,6 @@ import Mission5 from "./pages/mission5/Mission5";
 import EndPage from "./pages/endPage/EndPage";
 import AboutPage from "./pages/aboutPage/AboutPage";
 import { AnimatePresence } from "framer-motion";
-import { gsap } from "gsap";
 
 function App() {
   const appRef = useRef();
@@ -25,8 +24,6 @@ function App() {
   useEffect(() => {
     setTextIndex(1);
   }, []);
-
-  useEffect(() => {}, [backgroundType]);
 
   return (
     <div ref={appRef} className={`App ${backgroundType}`}>
