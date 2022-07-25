@@ -11,29 +11,31 @@ function AboutPage(props) {
       <h1 className="mission-title about-title">אודות</h1>
       <div className="paragrapghs-container">
         <p className="about-paragtapgh">
-          ראש מדור מט"ח: <br />
+          <span className="bold-text">ראש מדור מט"ח: </span> <br />
           רס"ן מור יהלומי - דאהן
         </p>
         <p className="about-paragtapgh">
-          מפקדת הדיגיטל: <br />
+          <span className="bold-text">מפקדת הדיגיטל: </span>
+          <br />
           סגן יעל חפץ
         </p>
         <p className="about-paragtapgh">
-          מפקדת הסטודיו: <br />
+          <span className="bold-text">מפקדת הסטודיו: </span>
+          <br />
           סג"ם שיר יפה
         </p>
         <p className="about-paragtapgh">
-          מפתחת הלומדה:
+          <span className="bold-text">מפתחת הלומדה:</span>
           <br />
           סמל ריטה ברזובסקי
         </p>
         <p className="about-paragtapgh">
-          עיצוב:
+          <span className="bold-text">עיצוב:</span>
           <br />
           סמל אריאל ליכטמן
         </p>
         <p className="about-paragtapgh">
-          מומחה התוכן:
+          <span className="bold-text">מומחה התוכן:</span>
           <br />
           סגן מאיה אריאל
         </p>

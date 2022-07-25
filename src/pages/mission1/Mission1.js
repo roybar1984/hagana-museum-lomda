@@ -6,7 +6,7 @@ import InfoIcon from "../../components/infoIcon/InfoIcon";
 import BackBtn from "../../components/backBtn/BackBtn";
 import NextBtn from "../../components/nextBtn/NextBtn";
 import { useNavigate } from "react-router-dom";
-// import InputField from "../../components/inputField/InputField";
+import ChangeBackgroundAnimation from "../../components/ChangeBackgroundAnimation";
 
 function Mission1(props) {
   const navigate = useNavigate();
@@ -78,6 +78,7 @@ function Mission1(props) {
     navigate("/mission2");
   };
   return (
+    <ChangeBackgroundAnimation>
     <div className="mission-container">
       <h1 className="mission-title">
         {" "}
@@ -145,6 +146,7 @@ function Mission1(props) {
         />
       )}
     </div>
+    </ChangeBackgroundAnimation>
   );
 }
 
