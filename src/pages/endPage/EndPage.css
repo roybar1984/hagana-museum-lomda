@@ -10,8 +10,15 @@
 .end-text {
   font-family: text-font;
   font-weight: 700;
+  position: relative;
+  top: -1vh;
 }
 
 .to-about-page-btn {
   top: 69vh;
+}
+
+.end-gif {
+  position: relative;
+  top: 2vh;
 }

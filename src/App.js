@@ -13,7 +13,7 @@ import IntroMission5 from "./pages/introMission5/IntroMission5";
 import Mission5 from "./pages/mission5/Mission5";
 import EndPage from "./pages/endPage/EndPage";
 import AboutPage from "./pages/aboutPage/AboutPage";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion/dist/framer-motion";
 
 function App() {
   const appRef = useRef();

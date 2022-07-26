@@ -36,7 +36,7 @@ function EndPage(props) {
             textIndex={props.textIndex}
             setTextIndex={props.setTextIndex}
           />
-          <img className="character-gif" src={gif} alt="loading..." />
+          <img className="character-gif end-gif" src={gif} alt="loading..." />
           <p className="text intro-text end-text">
             <Markup content={props.Data[10].text} />
           </p>
