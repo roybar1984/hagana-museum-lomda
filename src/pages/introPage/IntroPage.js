@@ -4,12 +4,14 @@ import "./IntroPage.css";
 // import { gsap } from "gsap";
 import { Markup } from "interweave";
 import gif from "../../media/gifs/Soldier-talking-fixed.gif";
+import lookingGif from "../../media/gifs/Soldier-no talking-fixed.gif";
 import NextBtn from "../../components/nextBtn/NextBtn";
 import AnimatedPage from "../../components/AnimatedPage";
 
 function IntroPage(props) {
   const navigate = useNavigate();
   const [typedtext, setTypedtext] = useState("");
+  const [currGif, setCurrGif] = useState(gif);
 
   useEffect(() => {
     props.setTextIndex(1);
@@ -17,6 +19,9 @@ function IntroPage(props) {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
+    if (currGif === lookingGif) {
+      setCurrGif(gif);
+    }
     const timeout = setTimeout(() => {
       setTypedtext(
         props.Data[props.textIndex].text.slice(0, typedtext.length + 1)
@@ -25,6 +30,13 @@ function IntroPage(props) {
 
     return () => clearTimeout(timeout);
   }, [typedtext, props.textIndex]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCurrGif(lookingGif);
+    }, 14000);
+    return () => clearTimeout(timer);
+  }, [props.textIndex]);
 
   const handleClickNext = (event) => {
     if (props.textIndex === 2) {
@@ -42,14 +54,16 @@ function IntroPage(props) {
         <h1 className="mission-title">
           <Markup content={props.Data[props.textIndex].title} />
         </h1>
-        <img className="character-gif" src={gif} alt="loading..." />
+        <img className="character-gif" src={currGif} alt="loading..." />
         <p
           className={`text intro-text blinking-cursor ${props.textIndex === 2 &&
             "fade-animation"}`}
         >
           <Markup content={typedtext} />
         </p>
-        <NextBtn handleClickNext={handleClickNext} />
+        {currGif === lookingGif && (
+          <NextBtn handleClickNext={handleClickNext} />
+        )}
       </div>
     </AnimatedPage>
   );
