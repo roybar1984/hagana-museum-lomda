@@ -13,6 +13,8 @@ function Mission2(props) {
   const [isFinished, setIsFinished] = useState(false);
   const [readOnly, setReadOnly] = useState(false);
   const [isAllFull, setIsAllFull] = useState(false);
+  const [isCorrect1, setIsCorrect1] = useState(false);
+  const [isCorrect2, setIsCorrect2] = useState(false);
 
   const initialState = {
     ans1: "",
@@ -33,7 +35,7 @@ function Mission2(props) {
     }
     // checkIfAllFull(newState);
     let isAllTrue = true;
-    Object.keys(newState).forEach(function (key, index) {
+    Object.keys(newState).forEach(function(key, index) {
       if (!newState[key]) {
         isAllTrue = false;
         setIsAllFull(false);
@@ -57,6 +59,38 @@ function Mission2(props) {
   const handleCheckMission2 = (event) => {
     setIsFinished(true);
     setReadOnly(true);
+    checkIsCorrect();
+  };
+
+  const checkIsCorrect = () => {
+    if (state.ans1 === state.ans2) {
+      if (
+        state.ans1 === props.Data[5].answers[0] ||
+        state.ans1 === props.Data[5].answers[1]
+      ) {
+        setIsCorrect1(true);
+      } else {
+        setIsCorrect1(false);
+      }
+      setIsCorrect2(false);
+    } else {
+      if (
+        state.ans1 === props.Data[5].answers[0] ||
+        state.ans1 === props.Data[5].answers[1]
+      ) {
+        setIsCorrect1(true);
+      } else {
+        setIsCorrect1(false);
+      }
+      if (
+        state.ans2 === props.Data[5].answers[0] ||
+        state.ans2 === props.Data[5].answers[1]
+      ) {
+        setIsCorrect2(true);
+      } else {
+        setIsCorrect2(false);
+      }
+    }
   };
 
   const handleMoveMission3 = (event) => {
@@ -79,7 +113,8 @@ function Mission2(props) {
         </p>
         <div className="input-fields-container">
           <InputField
-            className="input-mission2"
+            className={`input-mission2 ${isCorrect1 && isFinished && "correct"} 
+             ${!isCorrect1 && isFinished && "wrong"}`}
             placeholder="הקלידו כאן"
             type="text"
             maxLength={8}
@@ -92,11 +127,14 @@ function Mission2(props) {
             setReadOnly={setReadOnly}
             id={0}
             Data={props.Data}
+            isCorrect={isCorrect1}
+            isFinished={isFinished}
             // isInputClicked={isInputClicked}
             // setIsInputClicked={setIsInputClicked}
           />
           <InputField
-            className="input-mission2"
+            className={`input-mission2 ${isCorrect2 && isFinished && "correct"} 
+             ${!isCorrect2 && isFinished && "wrong"}`}
             placeholder="הקלידו כאן"
             type="text"
             maxLength={8}
@@ -109,6 +147,8 @@ function Mission2(props) {
             setReadOnly={setReadOnly}
             id={1}
             Data={props.Data}
+            isCorrect={isCorrect2}
+            isFinished={isFinished}
             // isInputClicked={isInputClicked}
             // setIsInputClicked={setIsInputClicked}
           />

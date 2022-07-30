@@ -22,15 +22,19 @@ function InputField(props) {
       // }}
       onChange={(event) => {
         let answer = event.target.value;
-        if (answer !== "" && answer.trim() !== "") {
-          props.setAnswer(answer.trim());
-          if (props.checkAns) {
-            if (
-              answer.trim() === props.Data[props.textIndex].answers[props.id]
-            ) {
-              setIsCorrect(true);
-            } else {
-              setIsCorrect(false);
+        if (props.isMission5) {
+          props.handleCheckAnswers(answer, props.id);
+        } else {
+          if (answer !== "" && answer.trim() !== "") {
+            props.setAnswer(answer.trim());
+            if (props.checkAns) {
+              if (
+                answer.trim() === props.Data[props.textIndex].answers[props.id]
+              ) {
+                setIsCorrect(true);
+              } else {
+                setIsCorrect(false);
+              }
             }
           }
         }
