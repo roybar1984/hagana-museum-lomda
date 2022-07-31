@@ -57,7 +57,10 @@ function AboutPalmachPage(props) {
         <div
           onScroll={handleScroll}
           ref={scrollInnerRef}
-          className="scroll-text-container text scroll-text-container-dark"
+          className={`scroll-text-container text scroll-text-container-dark ${
+            props.textIndex === 9 && "scroll-height-shorter"
+          }`}
+        
         >
           <div
             className={`scroll-text ${
