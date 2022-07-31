@@ -23,7 +23,6 @@ function IntroPage(props) {
       setCurrGif(gif);
     }
     const timeout = setTimeout(() => {
-      console.log(typedtext);
       setTypedtext(
         props.Data[props.textIndex].text.slice(0, typedtext.length + 1)
       );

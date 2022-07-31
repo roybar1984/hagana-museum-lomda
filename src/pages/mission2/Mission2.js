@@ -44,7 +44,7 @@ function Mission2(props) {
     if (isAllTrue) {
       setIsAllFull(true);
     }
-    console.log(newState);
+  
     return newState;
   };
 
