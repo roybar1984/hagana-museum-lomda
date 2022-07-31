@@ -110,6 +110,7 @@
     margin-right: 4vw;
     font-weight: 500;
     font-family: text-font;
+    font-size: 8vw;
 
     /* padding-bottom: 0.3vh; */
     /* padding-top: 0.3vh; */
@@ -175,10 +176,10 @@
 
   .scroll-text-smaller {
     /* font-size: 9.5vw; */
-    font-size: 8vw;
+    font-size: 7.5vw;
   }
 
   .scroll-height-shorter {
-    height: 37vh;
+    height: 43vh;
   }
 }
