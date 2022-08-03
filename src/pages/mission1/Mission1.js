@@ -6,7 +6,7 @@ import InfoIcon from "../../components/infoIcon/InfoIcon";
 import BackBtn from "../../components/backBtn/BackBtn";
 import NextBtn from "../../components/nextBtn/NextBtn";
 import { useNavigate } from "react-router-dom";
-import ChangeBackgroundAnimation from "../../components/ChangeBackgroundAnimation";
+// import ChangeBackgroundAnimation from "../../components/ChangeBackgroundAnimation";
 
 function Mission1(props) {
   const navigate = useNavigate();
@@ -78,7 +78,7 @@ function Mission1(props) {
     navigate("/mission2");
   };
   return (
-    <ChangeBackgroundAnimation>
+    // <ChangeBackgroundAnimation>
     <div className="mission-container">
       <h1 className="mission-title">
         {" "}
@@ -120,9 +120,9 @@ function Mission1(props) {
         <input
           ref={inputRef}
           maxLength={2}
-          className={`number-input  ${isCorrect && "correct"} ${
-            isClicked && !isCorrect && "wrong"
-          } ${!isClicked && isCorrect === "" && "number-input"}`}
+          className={`number-input  ${isCorrect && "correct"} ${isClicked &&
+            !isCorrect &&
+            "wrong"} ${!isClicked && isCorrect === "" && "number-input"}`}
           placeholder={"מספר"}
           type={"number"}
           onChange={handleChangeAnswer}
@@ -146,7 +146,7 @@ function Mission1(props) {
         />
       )}
     </div>
-    </ChangeBackgroundAnimation>
+    // </ChangeBackgroundAnimation>
   );
 }
 

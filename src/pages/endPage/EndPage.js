@@ -6,7 +6,7 @@ import gif from "../../media/gifs/Soldier-no talking-fixed.gif";
 import TextBtn from "../../components/textBtn/TextBtn";
 import BackBtn from "./../../components/backBtn/BackBtn";
 import Confetti from "react-confetti";
-import AnimatedPage from "../../components/AnimatedPage";
+// import AnimatedPage from "../../components/AnimatedPage";
 
 function EndPage(props) {
   const navigate = useNavigate();
@@ -21,33 +21,33 @@ function EndPage(props) {
   };
 
   return (
-    <AnimatedPage>
-      <>
-        <Confetti
-          width={window.innerWidth}
-          height={window.innerHeight}
-          numberOfPieces={500}
-          tweenDuration={9000}
-          recycle={false}
-          delay={1000}
+    // <AnimatedPage>
+    <>
+      <Confetti
+        width={window.innerWidth}
+        height={window.innerHeight}
+        numberOfPieces={500}
+        tweenDuration={9000}
+        recycle={false}
+        delay={1000}
+      />
+      <div className="bubble-container end-container">
+        <BackBtn
+          textIndex={props.textIndex}
+          setTextIndex={props.setTextIndex}
         />
-        <div className="bubble-container end-container">
-          <BackBtn
-            textIndex={props.textIndex}
-            setTextIndex={props.setTextIndex}
-          />
-          <img className="character-gif end-gif" src={gif} alt="loading..." />
-          <p className="text intro-text end-text">
-            <Markup content={props.Data[10].text} />
-          </p>
-          <TextBtn
-            handleClick={handleMoveToAbout}
-            className="check-btn-mission3 to-about-page-btn fade-animation"
-            btnText=" אודות"
-          />
-        </div>
-      </>
-    </AnimatedPage>
+        <img className="character-gif end-gif" src={gif} alt="loading..." />
+        <p className="text intro-text end-text">
+          <Markup content={props.Data[10].text} />
+        </p>
+        <TextBtn
+          handleClick={handleMoveToAbout}
+          className="check-btn-mission3 to-about-page-btn fade-animation"
+          btnText=" אודות"
+        />
+      </div>
+    </>
+    // </AnimatedPage>
   );
 }
 

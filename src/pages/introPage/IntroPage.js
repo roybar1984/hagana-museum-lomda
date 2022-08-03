@@ -6,7 +6,7 @@ import { Markup } from "interweave";
 import gif from "../../media/gifs/Soldier-talking-fixed.gif";
 import lookingGif from "../../media/gifs/Soldier-no talking-fixed.gif";
 import NextBtn from "../../components/nextBtn/NextBtn";
-import AnimatedPage from "../../components/AnimatedPage";
+// import AnimatedPage from "../../components/AnimatedPage";
 
 function IntroPage(props) {
   const navigate = useNavigate();
@@ -47,25 +47,23 @@ function IntroPage(props) {
   };
 
   return (
-    <AnimatedPage>
-      <div className="bubble-container">
-        {/* {props.isHidden && <div ref={blackDivRef} className="black-div"></div>}
+    // <AnimatedPage>
+    <div className="bubble-container">
+      {/* {props.isHidden && <div ref={blackDivRef} className="black-div"></div>}
       {props.isPreMissionPages && ( */}
-        <h1 className="mission-title">
-          <Markup content={props.Data[props.textIndex].title} />
-        </h1>
-        <img className="character-gif" src={currGif} alt="loading..." />
-        <p
-          className={`text intro-text blinking-cursor ${props.textIndex === 2 &&
-            "fade-animation"}`}
-        >
-          <Markup content={typedtext} />
-        </p>
-        {currGif === lookingGif && (
-          <NextBtn handleClickNext={handleClickNext} />
-        )}
-      </div>
-    </AnimatedPage>
+      <h1 className="mission-title">
+        <Markup content={props.Data[props.textIndex].title} />
+      </h1>
+      <img className="character-gif" src={currGif} alt="loading..." />
+      <p
+        className={`text intro-text blinking-cursor ${props.textIndex === 2 &&
+          "fade-animation"}`}
+      >
+        <Markup content={typedtext} />
+      </p>
+      {currGif === lookingGif && <NextBtn handleClickNext={handleClickNext} />}
+    </div>
+    // </AnimatedPage>
   );
 }
 

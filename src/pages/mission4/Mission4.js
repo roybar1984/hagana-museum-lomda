@@ -7,7 +7,7 @@ import BackBtn from "./../../components/backBtn/BackBtn";
 import TextBtn from "../../components/textBtn/TextBtn";
 import NextBtn from "../../components/nextBtn/NextBtn";
 import PhoneIcon from "../../components/phoneIcon/PhoneIcon";
-import AnimatedPage from "../../components/AnimatedPage";
+// import AnimatedPage from "../../components/AnimatedPage";
 
 function Mission4(props) {
   const phoneNumberRef = useRef();
@@ -72,7 +72,7 @@ function Mission4(props) {
   }, [showMission]);
 
   return (
-    <AnimatedPage>
+    // <AnimatedPage>
       <>
         <div className="mission-container mission4-container">
           <BackBtn
@@ -162,7 +162,7 @@ function Mission4(props) {
           )}
         </div>
       </>
-    </AnimatedPage>
+    // </AnimatedPage>
   );
 }
 
