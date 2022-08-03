@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import BackBtn from "../../components/backBtn/BackBtn";
 import InputField from "../../components/inputField/InputField";
 import TextBtn from "../../components/textBtn/TextBtn";
-// import AnimatedPage from "../../components/AnimatedPage";
+import AnimatedPage from "../../components/AnimatedPage";
 
 function Mission2(props) {
   const navigate = useNavigate();
@@ -33,7 +33,6 @@ function Mission2(props) {
       default:
         throw new Error();
     }
-    // checkIfAllFull(newState);
     let isAllTrue = true;
     Object.keys(newState).forEach(function(key, index) {
       if (!newState[key]) {
@@ -53,7 +52,6 @@ function Mission2(props) {
   useEffect(() => {
     props.setTextIndex(5);
     props.setBackgroundType("light-background");
-    // setIsFinished(JSON.parse(window.localStorage.getItem("isFinished")));
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleCheckMission2 = (event) => {
@@ -98,90 +96,84 @@ function Mission2(props) {
   };
 
   return (
-    // <AnimatedPage>
-    <div className="mission-container mission2-container">
-      <BackBtn textIndex={props.textIndex} setTextIndex={props.setTextIndex} />
-      <h1 className="mission-title">
-        {" "}
-        <Markup content={props.Data[5].title} />
-      </h1>
-      <p className="mission-instruction-paragraph">
-        <Markup content={props.Data[5].instruction} />
-      </p>
-      <div className="input-fields-container">
-        <InputField
-          className={`input-mission2 ${isCorrect1 && isFinished && "correct"} 
-             ${!isCorrect1 && isFinished && "wrong"}`}
-          placeholder="הקלידו כאן"
-          type="text"
-          maxLength={8}
-          answer={state.ans1}
-          setAnswer={(value) => dispatch({ inputNumber: 1, inputValue: value })}
-          textIndex={5}
-          readOnly={readOnly}
-          setReadOnly={setReadOnly}
-          id={0}
-          Data={props.Data}
-          isCorrect={isCorrect1}
-          isFinished={isFinished}
-          // isInputClicked={isInputClicked}
-          // setIsInputClicked={setIsInputClicked}
-        />
-        <InputField
-          className={`input-mission2 ${isCorrect2 && isFinished && "correct"} 
-             ${!isCorrect2 && isFinished && "wrong"}`}
-          placeholder="הקלידו כאן"
-          type="text"
-          maxLength={8}
-          answer={state.ans2}
-          setAnswer={(value) => dispatch({ inputNumber: 2, inputValue: value })}
-          textIndex={5}
-          readOnly={readOnly}
-          setReadOnly={setReadOnly}
-          id={1}
-          Data={props.Data}
-          isCorrect={isCorrect2}
-          isFinished={isFinished}
-          // isInputClicked={isInputClicked}
-          // setIsInputClicked={setIsInputClicked}
-        />
-      </div>
-
-      {isAllFull && !isFinished && (
-        <TextBtn
-          handleClick={handleCheckMission2}
-          className="check-btn"
-          btnText="בדיקה"
-        />
-      )}
-
-      {isFinished && (
-        <p className="answer-paragraph fade-animation">
-          <Markup content={props.Data[5].answerText} />{" "}
-        </p>
-      )}
-
-      {isFinished && (
-        <NextBtn
+    <AnimatedPage>
+      <div className="mission-container mission2-container">
+        <BackBtn
           textIndex={props.textIndex}
-          handleClickNext={handleMoveMission3}
+          setTextIndex={props.setTextIndex}
         />
-      )}
+        <h1 className="mission-title">
+          {" "}
+          <Markup content={props.Data[5].title} />
+        </h1>
+        <p className="mission-instruction-paragraph">
+          <Markup content={props.Data[5].instruction} />
+        </p>
+        <div className="input-fields-container">
+          <InputField
+            className={`input-mission2 ${isCorrect1 && isFinished && "correct"} 
+             ${!isCorrect1 && isFinished && "wrong"}`}
+            placeholder="הקלידו כאן"
+            type="text"
+            maxLength={8}
+            answer={state.ans1}
+            setAnswer={(value) =>
+              dispatch({ inputNumber: 1, inputValue: value })
+            }
+            textIndex={5}
+            readOnly={readOnly}
+            setReadOnly={setReadOnly}
+            id={0}
+            Data={props.Data}
+            isCorrect={isCorrect1}
+            isFinished={isFinished}
+            // isInputClicked={isInputClicked}
+            // setIsInputClicked={setIsInputClicked}
+          />
+          <InputField
+            className={`input-mission2 ${isCorrect2 && isFinished && "correct"} 
+             ${!isCorrect2 && isFinished && "wrong"}`}
+            placeholder="הקלידו כאן"
+            type="text"
+            maxLength={8}
+            answer={state.ans2}
+            setAnswer={(value) =>
+              dispatch({ inputNumber: 2, inputValue: value })
+            }
+            textIndex={5}
+            readOnly={readOnly}
+            setReadOnly={setReadOnly}
+            id={1}
+            Data={props.Data}
+            isCorrect={isCorrect2}
+            isFinished={isFinished}
+            // isInputClicked={isInputClicked}
+            // setIsInputClicked={setIsInputClicked}
+          />
+        </div>
 
-      {/* 
-      {isFinished && [
-        <>
+        {isAllFull && !isFinished && (
+          <TextBtn
+            handleClick={handleCheckMission2}
+            className="check-btn"
+            btnText="בדיקה"
+          />
+        )}
+
+        {isFinished && (
           <p className="answer-paragraph fade-animation">
             <Markup content={props.Data[5].answerText} />{" "}
           </p>
+        )}
+
+        {isFinished && (
           <NextBtn
             textIndex={props.textIndex}
             handleClickNext={handleMoveMission3}
           />
-        </>,
-      ]} */}
-    </div>
-    // </AnimatedPage>
+        )}
+      </div>
+    </AnimatedPage>
   );
 }
 
