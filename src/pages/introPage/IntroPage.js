@@ -21,22 +21,10 @@ function IntroPage(props) {
     setTypedtext(props.Data[1].text);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // useEffect(() => {
-  // //   // if (currGif === lookingGif) {
-  // //   //   setCurrGif(gif);
-  // //   // }
-  // //   const timeout = setTimeout(() => {
-  // //     setTypedtext(
-  // //       props.Data[props.textIndex].text.slice(0, typedtext.length + 1)
-  // //     );
-  // //   }, 80);
-  // //   return () => clearTimeout(timeout);
-  // // }, [typedtext, props.textIndex]);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrGif(lookingGif);
-    }, 14000);
+    }, 10000);
     return () => {
       clearTimeout(timer);
       setCurrGif(gif);
