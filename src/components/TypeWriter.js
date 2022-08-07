@@ -13,7 +13,6 @@ function TypeWriter({ text, textIndex }) {
   }, [text]);
 
   useEffect(() => {
-    console.log(index.current);
     if (index.current < text.length) {
       const timeoutId = setTimeout(() => {
         setCurrentText((value) => value + text.charAt(index.current));

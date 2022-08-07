@@ -17,9 +17,6 @@ function InputField(props) {
       readOnly={props.readOnly}
       placeholder={props.placeholder}
       type={props.type}
-      // onClick={(event) => {
-      //   props.setIsInputClicked(true);
-      // }}
       onChange={(event) => {
         let answer = event.target.value;
         if (props.isMission5) {
