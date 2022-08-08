@@ -11,14 +11,17 @@
   font-family: text-font;
   font-weight: 700;
   position: relative;
-  top: -1vh;
+  margin-top: 10vh;
+  top: -11vh;
 }
 
 .to-about-page-btn {
   top: 69vh;
+  margin-top: 17vh;
 }
 
 .end-gif {
   position: relative;
-  top: 2vh;
+  top: 1vh;
+  margin-top: 14vh;
 }

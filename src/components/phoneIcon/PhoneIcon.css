@@ -6,27 +6,8 @@
   width: 20vw;
   position: absolute;
   top: 49vh;
-  /* -webkit-animation: vibrate 4s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
-  animation: vibrate 2s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 300px;
-  perspective: 300px; */
-
-  /* -webkit-animation: tilt-shaking 1s 
-    infinite; */
-  /* animation: tilt-shaking 1s ease-in-out infinite; */
-
-  /* animation: shake-animation 4.72s ease infinite; */
-  /* transform-origin: 50% 50%; */
-
   animation: shake-animation 3.5s infinite;
-
-  /* cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite; */
-  /* -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); */
+  margin-top: 6vh;
 }
 
 @keyframes shake-animation {

@@ -5,7 +5,7 @@
 .up-arrow {
   width: 8vw;
   position: relative;
-  top: -3vh;
+  top: 5vh;
   animation: move-up-down 1s infinite alternate;
 }
 

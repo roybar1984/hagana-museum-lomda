@@ -9,10 +9,10 @@
 }
 
 .about-paragtapgh {
-  font-size: 9vw;
+  font-size: 8vw;
   color: white;
   font-family: text-font;
-  margin-bottom: -2.7vh;
+  margin-bottom: -3vh;
 }
 
 .paragrapghs-container {
@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: space-around;
   height: 60vh;
-  position: relative;
-  top: -9vh;
-  margin-top: 18vh;
+  position: absolute;
+  top: -4vh;
+  margin-top: 23vh;
 }

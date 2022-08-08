@@ -124,7 +124,7 @@
     /* position: relative;
     top: 1vh; */
     position: absolute;
-    top: 16vh;
+    top: 11vh;
   }
 
   .intro-text {
@@ -132,7 +132,8 @@
     width: 80%;
     font-weight: 500;
     position: absolute;
-    top: 50vh;
+    top: 45vh;
+    margin-top: 11vh;
   }
 }
 
