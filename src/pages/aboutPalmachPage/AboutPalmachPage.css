@@ -90,6 +90,7 @@
   }
 
   ::-webkit-scrollbar {
+    -webkit-appearance: none;
     width: 0.3em;
   }
 
