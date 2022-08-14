@@ -120,7 +120,7 @@
   }
 
   .character-gif {
-    width: 66%;
+    width: 57%;
     /* position: relative;
     top: 1vh; */
     position: absolute;
@@ -128,11 +128,11 @@
   }
 
   .intro-text {
-    font-size: 8vw;
+    font-size: 7vw;
     width: 80%;
     font-weight: 500;
     position: absolute;
-    top: 42vh;
+    top: 35vh;
     margin-top: 14vh;
   }
 }

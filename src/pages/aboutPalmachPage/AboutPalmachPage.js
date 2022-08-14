@@ -8,6 +8,7 @@ import NextBtn from "./../../components/nextBtn/NextBtn";
 import AnimatedPage from "../../components/AnimatedPage";
 
 function AboutPalmachPage(props) {
+  const [isScrolling, setIsScrolling] = useState(false);
   const scrollInnerRef = useRef();
   useEffect(() => {
     props.setTextIndex(props.textIndex);
@@ -18,6 +19,7 @@ function AboutPalmachPage(props) {
   const [isFinishedScrolling, setIsFinishedScrolling] = useState(false);
 
   const handleScroll = (e) => {
+    setIsScrolling(true);
     if (scrollInnerRef.current) {
       const { scrollTop, scrollHeight, clientHeight } = scrollInnerRef.current;
       if (scrollTop + clientHeight >= scrollHeight) {
@@ -60,6 +62,7 @@ function AboutPalmachPage(props) {
             <Markup content={props.Data[props.textIndex].text} />
           </div>
         </div>
+        {!isScrolling && <div className={`scroll ${props.textIndex ===9 && "scroll-light"}`}></div>}
         <div className="chracter-btn-container">
           <img
             className="character-gif small-gif"
