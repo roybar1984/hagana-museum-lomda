@@ -9,7 +9,7 @@
 }
 
 .about-paragtapgh {
-  font-size: 8vw;
+  font-size: 7vw;
   color: white;
   font-family: text-font;
   margin-bottom: -3vh;
@@ -22,6 +22,6 @@
   justify-content: space-around;
   height: 60vh;
   position: absolute;
-  top: -4vh;
+  top: -7vh;
   margin-top: 23vh;
 }
