@@ -6,12 +6,12 @@
 }
 
 .info-container {
-  width: 57vw;
-  height: 34vh;
+  width: 48vw;
+  height: 42vh;
   padding-right: 2em;
   padding-left: 2em;
   border-radius: 3em;
-  font-size: 6.7vw;
+  font-size: 3.7vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,13 +38,13 @@
 
 .understand-btn {
   color: white;
-  min-width: 47vw;
+  min-width: 27vw;
   min-height: 4vh;
   padding: 0.2em;
   font-family: text-font;
   font-weight: 900;
-  border: solid white 1.2vw;
-  font-size: 7vw;
+  border: solid white 0.2vw;
+  font-size: 4vw;
   background-color: rgba(255, 255, 255, 0);
   display: flex;
   flex-direction: column;
@@ -69,9 +69,9 @@
 .answer-container {
   width: 60vw;
   min-height: 45vh;
-  border: solid #1b1464 1vw;
+  border: solid #1b1464 0.5vw;
   border-radius: 3em;
-  font-size: 6.7vw;
+  font-size: 3vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,7 +91,7 @@
   width: 14vw;
   /* width: fit-content; */
   height: 3vh;
-  font-size: 6vw;
+  font-size: 3vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +99,7 @@
   background-color: rgba(255, 255, 255, 0);
   border-bottom: solid #1b1464 0.2em;
   position: relative;
-  top: -11vh;
+  top: -13vh;
   text-align: center;
   padding: 0.3em;
   border-radius: 0.7em;
@@ -127,4 +127,63 @@
 
 .feedback-text-wrong {
   color: #eb5258bd;
+}
+
+@media only screen and (max-width: 768px) {
+  .info-container {
+    width: 57vw;
+    height: 34vh;
+    padding-right: 2em;
+    padding-left: 2em;
+    border-radius: 3em;
+    font-size: 6.7vw;
+  }
+
+  .understand-btn {
+    min-width: 47vw;
+    min-height: 4vh;
+    padding: 0.2em;
+    font-weight: 900;
+    border: solid white 1.2vw;
+    font-size: 7vw;
+  }
+
+  .answer-container {
+    width: 60vw;
+    min-height: 45vh;
+    border: solid #1b1464 1vw;
+    border-radius: 3em;
+    font-size: 6.7vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1em;
+    padding-left: 1em;
+    color: #1b1464;
+    font-weight: 900;
+    position: relative;
+    top: -4vh;
+    height: fit-content;
+    padding-top: 1em;
+    margin-top: 2vh;
+  }
+
+  .number-input {
+    width: 14vw;
+    /* width: fit-content; */
+    height: 3vh;
+    font-size: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: solid #1b1464 0.2em;
+    position: relative;
+    top: -11vh;
+    text-align: center;
+    padding: 0.3em;
+    border-radius: 0.7em;
+  }
 }

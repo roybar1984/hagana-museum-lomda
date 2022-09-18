@@ -3,7 +3,15 @@
 }
 
 .palmach-icon {
-  width: 53vw;
+  width: 17vw;
   position: absolute;
   top: 34vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .palmach-icon {
+    width: 53vw;
+    position: absolute;
+    top: 34vh;
+  }
 }

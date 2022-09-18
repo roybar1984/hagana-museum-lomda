@@ -20,7 +20,7 @@
 .mission5-instruction-paragrapgh {
   position: absolute;
   margin-bottom: 29vh;
-  font-size: 6.5vw;
+  font-size: 2.5vw;
   margin-top: 18vh;
 }
 
@@ -40,11 +40,11 @@
   color: rgba(250, 247, 247, 0.728);
 }
 .input-mission5:-ms-input-placeholder {
-  font-size: 6vw;
+  font-size: 2vw;
   color: rgba(250, 247, 247, 0.728);
 }
 .input-mission5::placeholder {
-  font-size: 7vw;
+  font-size: 3vw;
   color: rgba(250, 247, 247, 0.728);
 }
 
@@ -54,11 +54,43 @@
 
 .answer-paragrapgh-mission-5 {
   position: relative;
-  top: 5vh;
+  top: 6vh;
   visibility: hidden;
   margin-top: 11vh;
+  font-size: 3vw;
 }
 
 .visible {
   visibility: visible;
+}
+
+@media only screen and (max-width: 768px) {
+  .mission5-instruction-paragrapgh {
+    position: absolute;
+    margin-bottom: 29vh;
+    font-size: 6.5vw;
+    margin-top: 18vh;
+  }
+  .input-mission5::-webkit-input-placeholder {
+    font-size: 6vw;
+    color: rgba(250, 247, 247, 0.728);
+  }
+  .input-mission5::-moz-placeholder {
+    font-size: 6vw;
+    color: rgba(250, 247, 247, 0.728);
+  }
+  .input-mission5:-ms-input-placeholder {
+    font-size: 6vw;
+    color: rgba(250, 247, 247, 0.728);
+  }
+  .input-mission5::placeholder {
+    font-size: 7vw;
+    color: rgba(250, 247, 247, 0.728);
+  }
+  .answer-paragrapgh-mission-5 {
+    position: relative;
+    top: 5vh;
+    visibility: hidden;
+    margin-top: 11vh;
+  }
 }

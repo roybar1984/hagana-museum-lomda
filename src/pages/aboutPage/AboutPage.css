@@ -1,7 +1,7 @@
 .about-title {
   font-family: title;
   color: whitesmoke;
-  font-size: 23vw;
+  font-size: 15vw;
   border: none;
   margin-bottom: 3vh;
   position: absolute;
@@ -9,7 +9,7 @@
 }
 
 .about-paragtapgh {
-  font-size: 7vw;
+  font-size: 3vw;
   color: white;
   font-family: text-font;
   margin-bottom: -3vh;
@@ -22,6 +22,35 @@
   justify-content: space-around;
   height: 60vh;
   position: absolute;
-  top: -7vh;
+  top: 0vh;
   margin-top: 23vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-title {
+    font-family: title;
+    color: whitesmoke;
+    font-size: 23vw;
+    border: none;
+    margin-bottom: 3vh;
+    position: absolute;
+    top: -2vh;
+  }
+  .about-paragtapgh {
+    font-size: 7vw;
+    color: white;
+    font-family: text-font;
+    margin-bottom: -3vh;
+  }
+
+  .paragrapghs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 60vh;
+    position: absolute;
+    top: -7vh;
+    margin-top: 23vh;
+  }
 }

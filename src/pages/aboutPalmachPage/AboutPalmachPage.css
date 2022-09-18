@@ -78,16 +78,16 @@
 .scroll {
   width: 40px;
   height: 40px;
-	border: 2px solid #333;
-	border-radius: 50%;
-	position: absolute;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
   top: 63vh;
-	animation: down 1.5s infinite;
-	-webkit-animation: down 1.5s infinite;
+  animation: down 1.5s infinite;
+  -webkit-animation: down 1.5s infinite;
 }
 
 .scroll::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 12px;
   left: 14px;
@@ -107,18 +107,21 @@
   border-bottom: 2px solid white;
 }
 
-@keyframes down {
-	0% {
-		transform: translate(0);
-	}
-	20% {
-		transform: translateY(10px);
-	}
-	40% {
-		transform: translate(0);
-	}
+.light-text {
+  color: white;
 }
 
+@keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(10px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .scroll-text-container {
@@ -205,10 +208,6 @@
     /* position: absolute;
   top: 72vh;
   right: 2vw; */
-  }
-
-  .light-text {
-    color: white;
   }
 
   .next-btn-scroll-page {

@@ -3,9 +3,9 @@
 }
 
 .up-arrow {
-  width: 8vw;
+  width: 3vw;
   position: relative;
-  top: 5vh;
+  top: 4vh;
   animation: move-up-down 1s infinite alternate;
 }
 
@@ -15,5 +15,14 @@
   }
   100% {
     transform: translateY(-10px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .up-arrow {
+    width: 8vw;
+    position: relative;
+    top: 5vh;
+    animation: move-up-down 1s infinite alternate;
   }
 }

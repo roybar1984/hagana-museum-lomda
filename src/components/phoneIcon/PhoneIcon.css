@@ -3,11 +3,12 @@
 }
 
 .phone-icon {
-  width: 20vw;
+  width: 8vw;
   position: absolute;
   top: 49vh;
   animation: shake-animation 3.5s infinite;
   margin-top: 6vh;
+  cursor: pointer;
 }
 
 @keyframes shake-animation {
@@ -83,5 +84,15 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .phone-icon {
+    width: 20vw;
+    position: absolute;
+    top: 49vh;
+    animation: shake-animation 3.5s infinite;
+    margin-top: 6vh;
   }
 }

@@ -15,8 +15,8 @@
 }
 
 .mission-instruction-paragraph {
-  font-size: 7vw;
-  width: 85vw;
+  font-size: 3vw;
+  width: 70vw;
   font-family: text-font;
   font-weight: 600;
   position: relative;
@@ -39,16 +39,16 @@
   background-color: rgb(255 255 255 / 37%);
   border: none;
   padding: 0.5em;
-  font-size: 6vw;
+  font-size: 3vw;
   text-align: center;
-  width: 70vw;
+  width: 49vw;
   height: 3vh;
   margin-bottom: 4vh;
   margin-top: 3vh;
 }
 
 .input-mission2::placeholder {
-  font-size: 6vw;
+  font-size: 3vw;
   /* color: rgba(250, 247, 247, 0.728); */
 }
 

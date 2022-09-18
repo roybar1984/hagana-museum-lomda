@@ -1,10 +1,9 @@
 .mission4-container {
-  /* top: -20vh; */
   color: white;
 }
 
 .mission4-instruction-paragrapgh {
-  font-size: 8vw;
+  font-size: 3vw;
   top: -18vh;
   margin-top: 11vh;
 }
@@ -12,13 +11,12 @@
 .mission4-question-paragrapgh {
   position: absolute;
   top: 26vh;
-  /* top: 10vh; */
-  font-size: 7vw;
+  font-size: 3vw;
   margin-top: 9vh;
 }
 
 .phone-number-text {
-  font-size: 17vw;
+  font-size: 10vw;
 }
 
 .phone-number {
@@ -28,7 +26,6 @@
 .phone-number-for-question {
   position: absolute;
   top: 16vh;
-  /* top: -27vh; */
   border: solid white 2px;
   border-radius: 1em;
   margin-top: 3vh;
@@ -42,10 +39,7 @@
 .input-mission4 {
   width: 63;
   position: absolute;
-  top: 53vh;
-  /* position: relative;
-  top: -14vh; */
-
+  top: 48vh;
   color: #1b1464;
   height: fit-content;
   word-wrap: break-word;
@@ -56,12 +50,12 @@
   align-items: center;
   justify-content: center;
   padding: 1em;
-  font-size: 6.5vw;
+  font-size: 3.5vw;
   margin-top: 3vh;
 }
 
 .input-mission4::placeholder {
-  font-size: 7vw;
+  font-size: 3.5vw;
 }
 
 .check-btn-mission4 {
@@ -75,8 +69,51 @@
 .answer-paragrapgh-mission-4 {
   width: 66vw;
   color: #b3faa0;
-  font-size: 4.5vw;
+  font-size: 3.5vw;
   top: 63vh;
   margin-top: 5vh;
   top: 69vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .mission4-instruction-paragrapgh {
+    font-size: 8vw;
+    top: -18vh;
+    margin-top: 11vh;
+  }
+
+  .phone-number-text {
+    font-size: 17vw;
+  }
+  .mission4-question-paragrapgh {
+    position: absolute;
+    top: 26vh;
+    font-size: 7vw;
+    margin-top: 9vh;
+  }
+  .input-mission4 {
+    width: 63;
+    position: absolute;
+    top: 53vh;
+    color: #1b1464;
+    height: fit-content;
+    word-wrap: break-word;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    font-size: 6.5vw;
+    margin-top: 3vh;
+  }
+  .answer-paragrapgh-mission-4 {
+    width: 66vw;
+    color: #b3faa0;
+    font-size: 4.5vw;
+    top: 63vh;
+    margin-top: 5vh;
+    top: 69vh;
+  }
 }
