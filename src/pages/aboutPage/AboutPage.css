@@ -1,7 +1,7 @@
 .about-title {
   font-family: title;
   color: whitesmoke;
-  font-size: 15vw;
+  font-size: 8vw;
   border: none;
   margin-bottom: 3vh;
   position: absolute;
@@ -9,7 +9,7 @@
 }
 
 .about-paragtapgh {
-  font-size: 3vw;
+  font-size: 2.5vw;
   color: white;
   font-family: text-font;
   margin-bottom: -3vh;
